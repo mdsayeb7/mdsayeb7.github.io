@@ -16,7 +16,4 @@ Here are some ideas to get you started:
 -->
 
 # 📊 GitHub Stats:
-![](https://github-readme-streak-stats.herokuapp.com/?user=SayfullahSayeb&theme=blue_navy&hide_border=true)
-
----
-[![](https://visitcount.itsvg.in/api?id=SayfullahSayeb&icon=5&color=12)](https://visitcount.itsvg.in)
+![](https://github-readme-streak-stats.herokuapp.com/?user=ssayeb7&theme=blue_navy&hide_border=true)
