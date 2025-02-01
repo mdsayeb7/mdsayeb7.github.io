@@ -19,27 +19,26 @@ params:
   title: ExampleSite
   description: "ExampleSite description"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Me
+  author: Sayfullah Sayeb
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: dark # dark, light
   disableThemeToggle: true
-
   ShowReadingTime: true
-  ShowShareButtons: true
+#  ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  ShowWordCount: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
-  disableSpecial1stPost: false
+#  disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
+#  comments: false
   hidemeta: false
   hideSummary: false
-  showtoc: false
+  showtoc: true
   tocopen: false
 
   assets:
@@ -53,8 +52,8 @@ params:
 
   label:
     text: "Sayfullah Sayeb"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
+#    icon: /apple-touch-icon.png
+#   iconHeight: 35
 
   # profile-mode
   profileMode:
@@ -79,28 +78,28 @@ params:
   socialIcons:
     - name: cv
       url: "https://example.com"
-    - name: telegram
-      url: "https://t.me/SayebPD"
     - name: github
       url: "https://github.com/mdsayeb7"
+    - name: telegram
+      url: "https://t.me/SayebPD"
 
-  analytics:
-    google:
-      SiteVerificationTag: ""
-    bing:
-      SiteVerificationTag: ""
-    yandex:
-      SiteVerificationTag: ""
+#  analytics:
+#    google:
+#      SiteVerificationTag: ""
+#    bing:
+#      SiteVerificationTag: ""
+#    yandex:
+#      SiteVerificationTag: ""
 
   cover:
     hidden: true # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
 
-  editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+#  editPost:
+#    URL: "https://github.com/<path_to_repo>/content"
+#    Text: "Suggest Changes" # edit text
+#    appendFilePath: true # to append file path to Edit link
 
   # for search
   # https://fusejs.io/api/options.html
@@ -118,16 +117,19 @@ menu:
     - name: Main Page
       url: /
       weight: 1
-    - name: Index
-      url: /posts/
+    - name: About
+      url: /about/
       weight: 5
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    - name: Posts
+      url: /posts/
       weight: 10
     - identifier: photography
       name: Photography
       url: /gallery/
+      weight: 15
+    - identifier: categories
+      name: Categories
+      url: /categories/
       weight: 20
     - identifier: search
       name: Search
@@ -143,3 +145,10 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+#languages:
+#  en:
+#    languageName: "English"
+#    weight: 1
+#  bn:
+#    languageName: "বাংলা"
+#    weight: 2

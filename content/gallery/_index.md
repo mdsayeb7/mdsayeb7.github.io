@@ -1,4 +1,6 @@
 ---
+title: "My Photography Gallery"
+description: "A collection of stunning photographs from various locations."
 layout: "list"
 gallery_items:
   - image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
@@ -20,3 +22,5 @@ gallery_items:
     date: "26 Jan 25"
     location: "Mirpur"
 ---
+
+Welcome to my photography gallery! Here you'll find a collection of stunning photographs from various locations. Each image captures a unique moment and tells a story of its own. Enjoy browsing through the gallery!
