@@ -1,120 +1,221 @@
----
-ShowToc: false
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    .box {
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #0f172a;
+            color: #fff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
 
-    .web-apps {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    .web-apps .box {
-      flex: 1 1 calc(33.333% - 20px);
-      box-sizing: border-box;
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
 
-    .web-apps img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 10px;
-    }
+        .card {
+            background: #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
 
-    .web-apps h3 {
-      margin-top: 0;
-    }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
 
-    .web-apps p {
-      margin: 10px 0;
-    }
+        .card-image-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
 
-    .web-apps a {
-      color: #007bff;
-      text-decoration: none;
-    }
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
 
-    .web-apps a:hover {
-      text-decoration: underline;
-    }
+        .card:hover .card-image {
+            transform: scale(1.1);
+        }
 
-    .web-apps .fab {
-      margin-right: 5px;
-    }
-  </style>
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.25em;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 12px;
+        }
+
+        .card-description {
+            color: #94a3b8;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background: #2d3a52;
+            color: #60a5fa;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.75em;
+            font-weight: 500;
+        }
+
+        .links {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #334155;
+        }
+
+        .link-icon {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        .github-icon:hover {
+            color: #f1f5f9;
+        }
+
+        .live-icon:hover {
+            color: #4ade80;
+        }
+
+        @media (max-width: 1200px) {
+            .grid {
+                gap: 20px;
+            }
+            .card-content {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .time-display {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="web-apps">
+    <div class="container">
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-image-container">
+                    <img class="card-image" src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Project 1">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Project One</h3>
+                    <p class="card-description">
+                        A modern web application showcasing the latest frontend technologies.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="link-icon github-icon" title="View Source Code">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="link-icon live-icon" title="View Live Demo">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="box">
-      <h3>Mentor Labs</h3>
-      <img src="path/to/logo.png" alt="Logo of Mentor Labs">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-      <p><strong>Technologies:</strong> Typescript, React, Redux Toolkit, Nodejs, PostgreSQL</p>
-      <p><a href="https://github.com/your-repo-link" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
-    </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-image-container">
+                    <img class="card-image" src="https://images.unsplash.com/photo-1506765515384-028b60a970df" alt="Project 2">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Project Two</h3>
+                    <p class="card-description">
+                        An innovative solution with modern backend architecture.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="link-icon github-icon" title="View Source Code">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="link-icon live-icon" title="View Live Demo">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="box">
-      <h3>CS Overflow</h3>
-      <img src="path/to/logo.png" alt="Logo of CS Overflow">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-      <p><strong>Technologies:</strong> Typescript, React, Redux, Nodejs, PostgreSQL</p>
-      <p><a href="https://github.com/your-repo-link" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-image-container">
+                    <img class="card-image" src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e" alt="Project 3">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Project Three</h3>
+                    <p class="card-description">
+                        A full-stack application with real-time features.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Socket.io</span>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="link-icon github-icon" title="View Source Code">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="link-icon live-icon" title="View Live Demo">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="box">
-      <h3>Pass Man</h3>
-      <img src="path/to/logo.png" alt="Logo of Pass Man">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-      <p><strong>Technologies:</strong> Next.js, Next Auth, Prisma, Docker, Chakra UI</p>
-      <p><a href="https://github.com/your-repo-link" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
-    </div>
-
-    <div class="box">
-      <h3>Code Treats</h3>
-      <img src="path/to/logo.png" alt="Logo of Code Treats">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-      <p><strong>Technologies:</strong> Typescript, React, Nodejs, MongoDB, Socket</p>
-      <p><a href="https://github.com/your-repo-link" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
-    </div>
-
-    <div class="box">
-      <h3>E-Complaints</h3>
-      <img src="path/to/logo.png" alt="Logo of E-Complaints">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-      <p><strong>Technologies:</strong> Node.js, Express, Ejs, MongoDB</p>
-      <p><a href="https://github.com/your-repo-link" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
-    </div>
-
-    <div class="box">
-      <h3>Node.js Blog System</h3>
-      <img src="path/to/logo.png" alt="Logo of Node.js Blog System">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-      <p><strong>Technologies:</strong> Node.js, Express, Ejs, MongoDB</p>
-      <p><a href="https://github.com/your-repo-link" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
-    </div>
-
-    <div class="box">
-      <h3>Tour 360°</h3>
-      <img src="path/to/logo.png" alt="Logo of Tour 360°">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-      <p><strong>Technologies:</strong> Php, MySQL, Aws</p>
-      <p><a href="https://github.com/your-repo-link" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
-    </div>
-  </div>
 </body>
 </html>
