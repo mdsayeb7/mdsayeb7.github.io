@@ -14,12 +14,11 @@
     <lastBuildDate>Fri, 31 Jan 2025 01:57:52 +0600</lastBuildDate>
     <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Your New Post</title>
-      <link>//localhost:1313/posts/firstpost/your-new-post/</link>
+      <title>First Post</title>
+      <link>//localhost:1313/posts/firstpost/firstpost/</link>
       <pubDate>Fri, 31 Jan 2025 01:57:52 +0600</pubDate>
-      <guid>//localhost:1313/posts/firstpost/your-new-post/</guid>
-      <description>&lt;h1 id=&#34;welcome-to-my-new-post&#34;&gt;Welcome to My New Post&lt;/h1&gt;
-&lt;p&gt;This is the content of my new post.&lt;/p&gt;</description>
+      <guid>//localhost:1313/posts/firstpost/firstpost/</guid>
+      <description>&lt;h1 id=&#34;welcome-to-my-new-post&#34;&gt;Welcome to My New Post&lt;/h1&gt;</description>
     </item>
   </channel>
 </rss>

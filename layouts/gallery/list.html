@@ -1,0 +1,27 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <!-- Remove header section since we don't want the headline -->
+  <div class="gallery-container">
+    <div class="gallery">
+      {{ range .Params.gallery_items }}
+      <div class="gallery-item">
+          <img src="{{ .image }}" alt="{{ .title }}" loading="lazy">
+          <div class="image-caption">
+              <div class="image-details">{{ .location }}, {{ .date }}</div>
+          </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <div class="lightbox-content">
+          <img id="lightbox-img" src="" alt="Large Image">
+          <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
+  </div>
+</article>
+
+{{- end }}
