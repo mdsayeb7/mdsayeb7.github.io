@@ -1,21 +1,11 @@
-/* Override PaperMod main width */
-.main {
-    max-width: 900px !important;
-    width: 900px !important;
-}
-
 .post-single {
-    max-width: 900px !important;
-    width: 900px !important;
+    max-width: 100% !important;
     padding: 0 !important;
-    margin: 0 auto !important;
 }
 
 .gallery-container {
-    width: 900px !important;
-    max-width: 900px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 
@@ -24,7 +14,6 @@
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     margin: 20px auto;
-    width: 100%;
 }
 
 .gallery-item {
@@ -34,6 +23,7 @@
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 .gallery-item img {
     width: 100%;
