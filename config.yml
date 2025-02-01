@@ -23,8 +23,8 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
-  disableThemeToggle: false
+  defaultTheme: dark # dark, light
+  disableThemeToggle: true
 
   ShowReadingTime: true
   ShowShareButtons: true
@@ -52,7 +52,7 @@ params:
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "Home"
+    text: "Sayfullah Sayeb"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -73,7 +73,7 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi I'm Sayfullah Sayeb"
+    Title: "A few words about me"
     Content:  I'm currently the CTO of Alphaus, a Tokyo-based startup doing cloud financial operations. My interests at the moment revolve around distributed systems and cloud computing. Outside of work, I enjoy reading, especially high fantasy with very interesting magic systems. I'm also into music. I play a couple of instruments (bass, guitar, piano, and drums) although I'm not very good at any of them.
 
   socialIcons:

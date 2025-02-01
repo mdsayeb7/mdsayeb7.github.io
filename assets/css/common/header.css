@@ -2,10 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: calc(var(--nav-width) + var(--gap) * 2);
     margin-inline-start: auto;
     margin-inline-end: auto;
     line-height: var(--header-height);
+    background-color: #1a1b27;
 }
 
 .nav a {
@@ -65,31 +65,21 @@ body:not(.dark) #sun {
     font-size: 16px;
     background: #343B58;
     border-radius: 3px;
-    padding: 8px 12px;  /* Increased padding for better spacing */
+    padding: 5px 10px;
     color: #e6e7ed;
     text-transform: capitalize;
-    transition: background-color 150ms, color 150ms;
-    display: flex; /* Ensures full background coverage */
-    align-items: center; /* Align text in the middle */
-    justify-content: center; /* Center text horizontally */
+    transition: background-color 150ms;
+}
+
+#menu .active {
+    font-weight: bold;
+    background-color: #565f89;
 }
 
 #menu a:hover {
     background-color: #565f89;
     color: #ffffff;
 }
-
-/* Ensure active item covers full background */
-#menu .active {
-    font-weight: bold;
-    background-color: #565f89;
-    color: #ffffff;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 .lang-switch li,
 .lang-switch ul,
