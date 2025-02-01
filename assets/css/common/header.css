@@ -1,0 +1,114 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    line-height: var(--header-height);
+}
+
+.nav a {
+    display: block;
+}
+
+.logo,
+#menu {
+    display: flex;
+    margin: auto var(--gap);
+}
+
+.logo {
+    flex-wrap: inherit;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo a img, .logo a svg {
+    display: inline;
+    vertical-align: middle;
+    pointer-events: none;
+    transform: translate(0, -10%);
+    border-radius: 6px;
+    margin-inline-end: 8px;
+}
+
+button#theme-toggle {
+    font-size: 26px;
+    margin: auto 4px;
+}
+
+body.dark #moon {
+    vertical-align: middle;
+    display: none;
+}
+
+body:not(.dark) #sun {
+    display: none;
+}
+
+#menu {
+    list-style: none;
+    word-break: keep-all;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    line-height: 1;
+}
+
+#menu a {
+    font-size: 16px;
+    background: #343B58;
+    border-radius: 3px;
+    padding: 8px 12px;  /* Increased padding for better spacing */
+    color: #e6e7ed;
+    text-transform: capitalize;
+    transition: background-color 150ms, color 150ms;
+    display: flex; /* Ensures full background coverage */
+    align-items: center; /* Align text in the middle */
+    justify-content: center; /* Center text horizontally */
+}
+
+#menu a:hover {
+    background-color: #565f89;
+    color: #ffffff;
+}
+
+/* Ensure active item covers full background */
+#menu .active {
+    font-weight: bold;
+    background-color: #565f89;
+    color: #ffffff;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.lang-switch li,
+.lang-switch ul,
+.logo-switches {
+    display: inline-flex;
+    margin: auto 4px;
+}
+
+.lang-switch {
+    display: flex;
+    flex-wrap: inherit;
+}
+
+.lang-switch a {
+    margin: auto 3px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.logo-switches {
+    flex-wrap: inherit;
+}
