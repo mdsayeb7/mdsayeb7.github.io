@@ -169,19 +169,7 @@
     &lt;title&gt;Project Gallery&lt;/title&gt;
     &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css&#34;&gt;
     &lt;style&gt;
-        body {
-            margin: 0;
-            padding: 20px;
-            background-color: #0f172a;
-            color: #fff;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif;
-        }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
 
         .grid {
             display: grid;

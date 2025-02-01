@@ -1,221 +1,193 @@
+---
+ShowToc: false
+showBreadcrumbs: false
+hideMeta: true
+---
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Gallery</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            background-color: #0f172a;
-            color: #fff;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .post-content img,
+    .post-content a,
+    .post-content h3 {
+      margin: 0% !important;
+      box-shadow: none !important;
+    }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+    .card {
+      background: #1a1b27;
+      border-radius: 12px;
+      overflow: hidden;
+    }
 
-        .card {
-            background: #1e293b;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
+    .card-image-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
+    .card-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .card-image-container {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-        }
+    .card-content {
+      padding: 16px;
+    }
 
-        .card-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
+    .card-title {
+      font-size: 1.25em;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-bottom: 12px;
+    }
 
-        .card:hover .card-image {
-            transform: scale(1.1);
-        }
+    .card-description {
+      color: #94a3b8;
+      font-size: 0.9em;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
 
-        .card-content {
-            padding: 20px;
-        }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
 
-        .card-title {
-            font-size: 1.25em;
-            font-weight: 600;
-            color: #f1f5f9;
-            margin-bottom: 12px;
-        }
+    .tag {
+      background: #2d3a52;
+      color: #60a5fa;
+      padding: 1px 10px;
+      border-radius: 15px;
+      font-size: 0.75em;
+      font-weight: 500;
+    }
 
-        .card-description {
-            color: #94a3b8;
-            font-size: 0.9em;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
+    .links {
+      display: flex;
+      justify-content: flex-start;
+      gap: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #334155;
+    }
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
+    .link-icon {
+      color: #64748b;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
 
-        .tag {
-            background: #2d3a52;
-            color: #60a5fa;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.75em;
-            font-weight: 500;
-        }
+    .github-icon:hover,
+    .live-icon:hover {
+      color: #2d2d3b;
+    }
 
-        .links {
-            display: flex;
-            justify-content: flex-start;
-            gap: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #334155;
-        }
+    /* Responsive breakpoints */
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-        .link-icon {
-            color: #64748b;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: all 0.3s ease;
-        }
-
-        .github-icon:hover {
-            color: #f1f5f9;
-        }
-
-        .live-icon:hover {
-            color: #4ade80;
-        }
-
-        @media (max-width: 1200px) {
-            .grid {
-                gap: 20px;
-            }
-            .card-content {
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            .time-display {
-                text-align: center;
-            }
-        }
-    </style>
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="grid">
-            <!-- Card 1 -->
-            <div class="card">
-                <div class="card-image-container">
-                    <img class="card-image" src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Project 1">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Project One</h3>
-                    <p class="card-description">
-                        A modern web application showcasing the latest frontend technologies.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">React</span>
-                        <span class="tag">TypeScript</span>
-                    </div>
-                    <div class="links">
-                        <a href="#" class="link-icon github-icon" title="View Source Code">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="link-icon live-icon" title="View Live Demo">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="card">
-                <div class="card-image-container">
-                    <img class="card-image" src="https://images.unsplash.com/photo-1506765515384-028b60a970df" alt="Project 2">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Project Two</h3>
-                    <p class="card-description">
-                        An innovative solution with modern backend architecture.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Express</span>
-                    </div>
-                    <div class="links">
-                        <a href="#" class="link-icon github-icon" title="View Source Code">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="link-icon live-icon" title="View Live Demo">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="card">
-                <div class="card-image-container">
-                    <img class="card-image" src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e" alt="Project 3">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Project Three</h3>
-                    <p class="card-description">
-                        A full-stack application with real-time features.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">Socket.io</span>
-                    </div>
-                    <div class="links">
-                        <a href="#" class="link-icon github-icon" title="View Source Code">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="link-icon live-icon" title="View Live Demo">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <div class="card-image-container">
+          <img class="card-image" src="https://images.unsplash.com/photo-1506765515384-028b60a970df" alt="Project">
         </div>
+        <div class="card-content">
+          <h3 class="card-title">Project Title</h3>
+          <p class="card-description">Project description here.</p>
+          <div class="tags">
+            <span class="tag">Tag 1</span>
+            <span class="tag">Tag 2</span>
+          </div>
+          <div class="links">
+            <a href="#" class="link-icon github-icon">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="link-icon live-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image-container">
+          <img class="card-image" src="https://images.unsplash.com/photo-1506765515384-028b60a970df" alt="Project">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Project Title</h3>
+          <p class="card-description">Project description here.</p>
+          <div class="tags">
+            <span class="tag">Tag 1</span>
+            <span class="tag">Tag 2</span>
+          </div>
+          <div class="links">
+            <a href="#" class="link-icon github-icon">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="link-icon live-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image-container">
+          <img class="card-image" src="https://images.unsplash.com/photo-1506765515384-028b60a970df" alt="Project">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Project Title</h3>
+          <p class="card-description">Project description here.</p>
+          <div class="tags">
+            <span class="tag">Tag 1</span>
+            <span class="tag">Tag 2</span>
+          </div>
+          <div class="links">
+            <a href="#" class="link-icon github-icon">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="link-icon live-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 </body>
+
 </html>
