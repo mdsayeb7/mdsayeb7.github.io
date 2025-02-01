@@ -102,3 +102,9 @@ body:not(.dark) #sun {
 .logo-switches {
     flex-wrap: inherit;
 }
+@media (max-width: 768px) {
+    #menu {
+      padding-bottom: 15px;
+    }
+  }
+  
