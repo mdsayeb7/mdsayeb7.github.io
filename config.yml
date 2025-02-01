@@ -80,6 +80,10 @@ params:
       url: "https://example.com"
     - name: github
       url: "https://github.com/mdsayeb7"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/sayfullahsayeb/"
+    - name: email
+      url: "mailto:sayfullah.sayeb@gmail.com"
     - name: telegram
       url: "https://t.me/SayebPD"
 
