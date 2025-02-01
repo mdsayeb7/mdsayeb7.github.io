@@ -131,9 +131,9 @@ menu:
       name: Photography
       url: /gallery/
       weight: 15
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    - identifier: tags
+      name: Tags
+      url: /tags/
       weight: 20
     - identifier: search
       name: Search
