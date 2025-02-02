@@ -70,10 +70,20 @@ params:
       - name: Tags
         url: tags
 
-  # home-info mode
+params:
   homeInfoParams:
-    Title: "A few words about me"
-    Content:  I'm currently the CTO of Alphaus, a Tokyo-based startup doing cloud financial operations. My interests at the moment revolve around distributed systems and cloud computing. Outside of work, I enjoy reading, especially high fantasy with very interesting magic systems. I'm also into music. I play a couple of instruments (bass, guitar, piano, and drums) although I'm not very good at any of them.
+    enabled: true
+    Title: "Hi, I'm MD Sayeb 👋"
+    Content: |
+      Welcome to my portfolio! I am a passionate developer focused on creating impactful solutions.
+
+      - 💻 Full Stack Developer
+      - 🌟 Open Source Enthusiast
+      - 📚 Continuous Learner
+
+      Currently working on exciting projects and learning new technologies.
+      
+      You can find my projects on GitHub and connect with me on LinkedIn.
 
   socialIcons:
     - name: cv
