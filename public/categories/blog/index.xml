@@ -4,6 +4,11 @@
     <title>Blog on Sayfullah Sayeb</title>
     <link>//localhost:1313/categories/blog/</link>
     <description>Recent content in Blog on Sayfullah Sayeb</description>
+    <image>
+      <title>Sayfullah Sayeb</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
     <generator>Hugo -- 0.142.0</generator>
     <language>en</language>
     <lastBuildDate>Fri, 31 Jan 2025 01:57:52 +0600</lastBuildDate>
