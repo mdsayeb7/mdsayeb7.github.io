@@ -73,15 +73,19 @@ params:
 params:
   homeInfoParams:
     enabled: true
-    Title: "Hi, I'm MD Sayeb 👋"
+    Title: "Hi, I'm Sayfullah Sayeb 👋"
     Content: |
       Welcome to my portfolio! I am a passionate developer focused on creating impactful solutions.
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
 
       - 💻 Full Stack Developer
       - 🌟 Open Source Enthusiast
       - 📚 Continuous Learner
 
-      Currently working on exciting projects and learning new technologies.
+      Currently working on exciting projects and learning new technologies. 
       
       You can find my projects on GitHub and connect with me on LinkedIn.
 
