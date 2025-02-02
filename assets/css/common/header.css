@@ -2,6 +2,8 @@
 
 body {
     font-family: 'Fira Sans', sans-serif;
+    background-image: url('/assets/backgroundPattern.svg');
+
 }
 
 .nav {
@@ -133,5 +135,5 @@ body:not(.dark) #sun {
 }
 
 .home-info .entry-content p {
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
 }
