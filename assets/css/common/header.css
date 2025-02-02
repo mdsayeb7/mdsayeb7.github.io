@@ -3,7 +3,10 @@
 body {
     font-family: 'Fira Sans', sans-serif;
     background-image: url('/assets/backgroundPattern.svg');
+}
 
+.main {
+    background-image: url('/assets/backgroundPattern.svg');
 }
 
 .nav {
