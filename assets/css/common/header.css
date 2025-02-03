@@ -248,7 +248,7 @@ body:not(.dark) #sun {
     transition: background-color 150ms;
 }
 
-#menu .active {
+#menu a:has(span.active) {
     font-weight: bold;
     background-color: #565f89;
 }
