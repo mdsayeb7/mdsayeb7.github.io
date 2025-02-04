@@ -39,6 +39,16 @@ hideMeta: true
       display: block;
       cursor: pointer;
       margin: 0;
+      filter: blur(10px);
+      opacity: 0.3;
+      transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-item img.loaded {
+      filter: blur(0);
+      opacity: 1;
     }
 
     .image-details {
@@ -121,21 +131,21 @@ hideMeta: true
     <p>A collection of stunning photographs from various locations.</p>
     <div class="gallery">
       <div class="gallery-item">
-        <img src="../img/1.webp" alt="Rampura">
+        <img src="../img/1.webp" alt="Rampura" loading="lazy">
         <div class="image-caption">
           <p class="image-details">Rampura, 21 Jan 25</p>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="../img/2.webp" alt="Badda">
+        <img src="../img/2.webp" alt="Badda" loading="lazy">
         <div class="image-caption">
           <p class="image-details">Badda, 22 Jan 25</p>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="../img/3.webp" alt="Gulshan">
+        <img src="../img/3.webp" alt="Badda" loading="lazy">
         <div class="image-caption">
-          <p class="image-details">Gulshan, 23 Jan 25</p>
+          <p class="image-details">Badda, 22 Jan 25</p>
         </div>
       </div>
     </div>
@@ -149,7 +159,7 @@ hideMeta: true
     </div>
   </div>
 
-  <script>
+  <script defer>
     document.addEventListener('DOMContentLoaded', () => {
       const images = document.querySelectorAll('.gallery-item img');
       const lightbox = document.getElementById('lightbox');
@@ -158,11 +168,21 @@ hideMeta: true
       const close = document.querySelector('.close');
 
       images.forEach(image => {
+        if (image.complete) {
+          image.classList.add('loaded');
+        } else {
+          image.addEventListener('load', () => {
+            image.classList.add('loaded');
+          });
+          image.addEventListener('error', () => {
+            image.classList.add('loaded');
+          });
+        }
+
         image.addEventListener('click', () => {
           lightboxImg.src = image.src;
-          const caption = image.parentElement.querySelector('.image-caption').innerHTML;
-          lightboxCaption.innerHTML = caption;
           lightbox.style.display = 'block';
+          lightboxCaption.innerHTML = image.parentElement.querySelector('.image-caption').innerHTML;
           document.body.style.overflow = 'hidden';
         });
       });
@@ -173,7 +193,6 @@ hideMeta: true
       };
 
       close.addEventListener('click', closeLightbox);
-
       lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
           closeLightbox();

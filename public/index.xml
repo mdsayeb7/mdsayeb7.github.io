@@ -76,6 +76,16 @@
       display: block;
       cursor: pointer;
       margin: 0;
+      filter: blur(10px);
+      opacity: 0.3;
+      transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-item img.loaded {
+      filter: blur(0);
+      opacity: 1;
     }
 
     .image-details {
