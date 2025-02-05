@@ -1,0 +1,49 @@
+<!doctype html><html lang=en dir=auto><head><meta name=generator content="Hugo 0.142.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Sayfullah Sayeb</title>
+<meta name=keywords content="Blog,Portfolio,PaperMod"><meta name=description content="ExampleSite description"><meta name=author content="Sayfullah Sayeb"><link rel=canonical href=//localhost:1313/><link crossorigin=anonymous href=/assets/css/stylesheet.38a520359dc7f69119369528c4b3fa697833e81ac0763d34941bbceeadba6272.css integrity="sha256-OKUgNZ3H9pEZNpUoxLP6aXgz6BrAdj00lBu87q26YnI=" rel="preload stylesheet" as=style><link rel=icon href=//localhost:1313/favicon.ico><link rel=icon type=image/png sizes=16x16 href=//localhost:1313/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=//localhost:1313/favicon-32x32.png><link rel=apple-touch-icon href=//localhost:1313/apple-touch-icon.png><link rel=mask-icon href=//localhost:1313/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=//localhost:1313/index.xml><link rel=alternate hreflang=en href=//localhost:1313/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:url" content="//localhost:1313/"><meta property="og:site_name" content="Sayfullah Sayeb"><meta property="og:title" content="Sayfullah Sayeb"><meta property="og:description" content="ExampleSite description"><meta property="og:locale" content="en"><meta property="og:type" content="website"><meta property="og:image" content="//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="Sayfullah Sayeb"><meta name=twitter:description content="ExampleSite description"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"Sayfullah Sayeb","url":"//localhost:1313/","description":"ExampleSite description","logo":"//localhost:1313/favicon.ico","sameAs":["https://example.com","https://github.com/mdsayeb7","https://www.linkedin.com/in/sayfullahsayeb/","mailto:sayfullah.sayeb@gmail.com","https://t.me/SayebPD"]}</script></head><body class="list dark" id=top><header class=header><nav class=nav><div class=logo><a href=//localhost:1313/ accesskey=h title="Sayfullah Sayeb (Alt + H)">Sayfullah Sayeb</a><div class=logo-switches></div></div><ul id=menu><li><a href=//localhost:1313/ title="Main Page"><span class=active>Main Page</span></a></li><li><a href=//localhost:1313/about/ title=About><span>About</span></a></li><li><a href=//localhost:1313/posts/ title=Posts><span>Posts</span></a></li><li><a href=//localhost:1313/projects/ title=Projects><span>Projects</span></a></li><li><a href=//localhost:1313/photography/ title=Photography><span>Photography</span></a></li><li><a href=//localhost:1313/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><main class=main><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>low ping aws server</h2></header><div class=entry-content><p>1- Frankfurt (eu-central-1)
+2- London (eu-west-2)
+3- Paris (eu-west-3)
+Stockholm (eu-north-1), Ireland (eu-west-1)
+Check time: 22-02-2024 09.37 gmt +6
+tested website: https://check-host.net/check-ping</p></div><footer class=entry-footer><span title='2024-02-22 21:24:00.011 +0600 +06'>February 22, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Sayfullah Sayeb</footer><a class=entry-link aria-label="post link to low ping aws server " href=//localhost:1313/2024/02/low-ping-aws-server.html></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>aapanel Install</h2></header><div class=entry-content><p>1-
+sudo su -
+2-
+sudo apt update && sudo apt upgrade -y
+reboot (recommended)
+3-
+URL=https://www.aapanel.com/script/install_6.0_en.sh && if [ -f /usr/bin/curl ];then curl -ksSO “$URL” ;else wget –no-check-certificate -O install_6.0_en.sh “$URL”;fi;bash install_6.0_en.sh aapanel
+4- (settings)
+bt
+for PHP Compiled
+Module name: mbstring
+Module parameter:- --enable-mbstring
+hide PHPMyAdmin errors
+config.inc.php $cfg[‘SendErrorReports’] = ’never’;
+To disable strict_trans_tables, you simply need to remove it from the list. So your sql-mode setting should look like:
+sql-mode=NO_ENGINE_SUBSTITUTION
+...</p></div><footer class=entry-footer><span title='2024-02-21 13:23:00.029 +0600 +06'>February 21, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Sayfullah Sayeb</footer><a class=entry-link aria-label="post link to aapanel Install" href=//localhost:1313/2024/02/aapanel-install.html></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Azure ubunto cpanel</h2></header><div class=entry-content><p>After creating vps check blacklist ip: https://mxtoolbox.com/blacklists.aspx
+download putty : https://putty.org/
+-——————————————————————————————————–
+1- login your vps go to root
+> sudo -i
+> sudo passwd root (for change root pass)
+> hostname (your domain name. ex; server.abc.com)
+> hostname -f (for checking hostname)
+2- Update it > sudo apt update
+> sudo apt install wget
+> sudo apt install perl - RECOMMENDED
+> sudo apt upgrade 3- DISABLE NETWORK MANAGER systemctl stop NetworkManager systemctl disable NetworkManager sudo systemctl stop systemd-networkd sudo systemctl disable systemd-networkd
+...</p></div><footer class=entry-footer><span title='2024-02-16 05:12:00.024 +0600 +06'>February 16, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Sayfullah Sayeb</footer><a class=entry-link aria-label="post link to Azure ubunto cpanel" href=//localhost:1313/2024/02/cpanel-ubunto.html></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>cpanel</h2></header><div class=entry-content><p>This was brought to you by Frank Moss. For a Step by Step Email to SMS
+Spamming course, contact me or join my channel for more info.
+DM: @frank_moss
+CHANNEL: @frankmoss_hub
+Below are the commands. As said in the video, when pasting just right
+click on your mouse and it will paste. DO NOT USE CTRL + V to paste because it won’t work. Just right-click
+====================================================================
+centos
+sudo passwd
+...</p></div><footer class=entry-footer><span title='2024-02-16 03:22:00.003 +0600 +06'>February 16, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Sayfullah Sayeb</footer><a class=entry-link aria-label="post link to cpanel" href=//localhost:1313/2024/02/cpanel.html></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Best wordpress backup plugin</h2></header><div class=entry-content><p>Wp - Vivid</p></div><footer class=entry-footer><span title='2024-02-04 04:20:00.001 +0600 +06'>February 4, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Sayfullah Sayeb</footer><a class=entry-link aria-label="post link to Best wordpress backup plugin" href=//localhost:1313/2024/02/best-wordpress-backup-plugin.html></a></article><footer class=page-footer><nav class=pagination><a class=prev href=//localhost:1313/page/4/>«&nbsp;Prev&nbsp;
+</a><a class=next href=//localhost:1313/page/6/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2025 <a href=//localhost:1313/>Sayfullah Sayeb</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a><p>Content is published under <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC BY-NC-SA 4.0 license</a>.</p><p>Thanks to rail, whose website design inspired this site's design.</p></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script></body></html>

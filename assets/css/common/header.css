@@ -163,11 +163,11 @@
 
 body {
   font-family: 'Fira Sans', sans-serif;
-  background-image: url('/assets/backgroundPattern.svg');
+  background-image: url('/assets/img/backgroundPattern.svg');
 }
 
 .main {
-    background-image: url('/assets/backgroundPattern.svg');
+    background-image: url('/assets/img/backgroundPattern.svg');
 }
 
 .nav {
@@ -207,10 +207,6 @@ body {
     transform: translate(0, -10%);
     border-radius: 6px;
     margin-inline-end: 8px;
-}
-
-.post-entry {
-    display: none;
 }
 
 button#theme-toggle {

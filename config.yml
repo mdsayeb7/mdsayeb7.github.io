@@ -1,6 +1,7 @@
 baseURL: "mdsayeb7.github.io"
 title: Sayfullah Sayeb
 pagination.pagerSize: 10
+paginate: 5
 theme: PaperMod
 
 enableRobotsTXT: true
