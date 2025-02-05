@@ -297,3 +297,8 @@ body:not(.dark) #sun {
 .home-info .entry-content p {
     margin-bottom: 1.5rem;
 }
+
+.top-link {
+    border-radius: 100px;
+
+}
