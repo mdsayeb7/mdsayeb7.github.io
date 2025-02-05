@@ -9,7 +9,7 @@ html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
-/* a, */
+a,
 button,
 body,
 h1,
@@ -19,10 +19,6 @@ h4,
 h5,
 h6 {
     color: var(--primary);
-}
-
-a{
-    color: #e6e7ed;
 }
 
 body {

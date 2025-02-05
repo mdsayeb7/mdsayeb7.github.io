@@ -70,7 +70,7 @@
       <description>&lt;p&gt;1- Go To Your Blogger Dashboard&lt;br&gt;
 2- Click On Theme Section&lt;br&gt;
 3- Click On Edit HTML&lt;br&gt;
-4- Find &lt;!-- raw HTML omitted --&gt; Tag&lt;br&gt;
+4- Find &lt;/body&gt; Tag&lt;br&gt;
 5- Paste the code above body end tag&lt;br&gt;
 6- remove /* &amp;amp; */ before and after script tag.&lt;/p&gt;
 &lt;p&gt;.infinite-blockquote { position: relative; background: #f8f9fa; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #0d6efd; font-family: &amp;lsquo;Courier New&amp;rsquo;, monospace; line-height: 1.6; color: #333; box-shadow: 0 2px 5px rgba(0,0,0,0.1); white-space: pre; overflow-x: auto; } .copy-button { position: absolute; top: 10px; right: 10px; padding: 6px 12px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background 0.3s; } .copy-button:hover { background: #0b5ed7; } @media screen and (max-width: 768px) { .infinite-blockquote { padding: 15px; margin: 10px 0; } } /* */ document.addEventListener(&amp;lsquo;DOMContentLoaded&amp;rsquo;, function() { const blockquotes = document.querySelectorAll(&amp;rsquo;.infinite-blockquote&amp;rsquo;); blockquotes.forEach(blockquote =&amp;gt; { // Preserve formatting of the original content const formattedContent = blockquote.innerHTML; blockquote.textContent = formattedContent; const copyButton = document.createElement(&amp;lsquo;button&amp;rsquo;); copyButton.textContent = &amp;lsquo;Copy&amp;rsquo;; copyButton.className = &amp;lsquo;copy-button&amp;rsquo;; blockquote.appendChild(copyButton); copyButton.addEventListener(&amp;lsquo;click&amp;rsquo;, async () =&amp;gt; { try { await navigator.clipboard.writeText(blockquote.textContent.replace(&amp;lsquo;Copy&amp;rsquo;, &amp;lsquo;&amp;rsquo;).trim()); copyButton.textContent = &amp;lsquo;Copied!&amp;rsquo;; setTimeout(() =&amp;gt; { copyButton.textContent = &amp;lsquo;Copy&amp;rsquo;; }, 1500); } catch (err) { copyButton.textContent = &amp;lsquo;Error&amp;rsquo;; setTimeout(() =&amp;gt; { copyButton.textContent = &amp;lsquo;Copy&amp;rsquo;; }, 1500); } }); }); }); /* */&lt;/p&gt;</description>
@@ -257,7 +257,7 @@ function save_plaza_product_field_grouped( $product_id ) {&lt;br&gt;
 // Add link around the image and title for plaza products&lt;br&gt;
 add_filter( &amp;rsquo;the_title&amp;rsquo;, &amp;lsquo;add_plaza_mark_to_title&amp;rsquo;, 10, 2 );&lt;br&gt;
 function add_plaza_mark_to_title( $title, $id ) {&lt;br&gt;
-    // Check if the title is being displayed in the frontend    if ( ! is_admin() ) {        $is_plaza_product = get_post_meta( $id, &amp;lsquo;_is_plaza_product&amp;rsquo;, true );        if ( $is_plaza_product === &amp;lsquo;yes&amp;rsquo; ) {            $image_url = &amp;lsquo;&lt;a href=&#34;https://noorexpress.shop/wp-content/uploads/2021/08/brand-alessi.png&#39;;&#34;&gt;https://noorexpress.shop/wp-content/uploads/2021/08/brand-alessi.png&#39;;&lt;/a&gt;            $image_target_url = &amp;lsquo;&lt;a href=&#34;https://noorexpress.shop/plaza/&#39;;&#34;&gt;https://noorexpress.shop/plaza/&#39;;&lt;/a&gt;            $product_permalink = get_permalink( $id );            $title = &amp;lsquo;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;rsquo; . $title . &amp;lsquo;&lt;!-- raw HTML omitted --&gt;&amp;rsquo;;        }    }    return $title;}&lt;br&gt;
+    // Check if the title is being displayed in the frontend    if ( ! is_admin() ) {        $is_plaza_product = get_post_meta( $id, &amp;lsquo;_is_plaza_product&amp;rsquo;, true );        if ( $is_plaza_product === &amp;lsquo;yes&amp;rsquo; ) {            $image_url = &amp;lsquo;&lt;a href=&#34;https://noorexpress.shop/wp-content/uploads/2021/08/brand-alessi.png&#39;;&#34;&gt;https://noorexpress.shop/wp-content/uploads/2021/08/brand-alessi.png&#39;;&lt;/a&gt;            $image_target_url = &amp;lsquo;&lt;a href=&#34;https://noorexpress.shop/plaza/&#39;;&#34;&gt;https://noorexpress.shop/plaza/&#39;;&lt;/a&gt;            $product_permalink = get_permalink( $id );            $title = &amp;lsquo;&lt;a href=&#34;&#39; . $image\_target\_url . &#39;&#34;&gt;&lt;img src=&#34;&#39; . $image\_url . &#39;&#34; alt=&#34;Plaza Product&#34; class=&#34;plaza-image&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;&#39; . $product\_permalink . &#39;&#34;&gt;&amp;rsquo; . $title . &amp;lsquo;&lt;/a&gt;&amp;rsquo;;        }    }    return $title;}&lt;br&gt;
 x&lt;/p&gt;</description>
     </item>
     <item>
@@ -569,30 +569,6 @@ sudo systemctl disable systemd-networkd&lt;/p&gt;</description>
 &lt;p&gt;body {&lt;/p&gt;
 &lt;p&gt;    overflow: hidden !important;&lt;/p&gt;
 &lt;p&gt;}&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Web 🔐  via chatgpt</title>
-      <link>//localhost:1313/2023/12/web.html</link>
-      <pubDate>Thu, 14 Dec 2023 14:34:00 +0600</pubDate>
-      <guid>//localhost:1313/2023/12/web.html</guid>
-      <description>&lt;p&gt;&lt;strong&gt;V1 (basic) (hack possible)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;        &lt;em&gt;body {&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;            &lt;em&gt;display: none;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;        &lt;em&gt;}&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;    &lt;em&gt;&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;    &lt;em&gt;&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;        &lt;em&gt;function validatePassword() {&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;            &lt;em&gt;var password = prompt(&amp;ldquo;Please enter the security key:&amp;rdquo;);&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;            &lt;em&gt;if (password !== &amp;ldquo;200&amp;rdquo;) {&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;                &lt;em&gt;alert(&amp;ldquo;Incorrect security key. Access denied.&amp;rdquo;);&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;                &lt;em&gt;document.body.innerHTML = &amp;ldquo;&amp;rdquo;;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;            &lt;em&gt;} else {&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;                &lt;em&gt;// If the password is correct, display the body content&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;                &lt;em&gt;document.body.style.display = &amp;ldquo;block&amp;rdquo;;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;            &lt;em&gt;}&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;        &lt;em&gt;}&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;    &lt;em&gt;&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>.ht access code</title>

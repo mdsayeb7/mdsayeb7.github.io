@@ -74,22 +74,24 @@ params:
   homeInfoParams:
     Title: "As-salamu alaykum,"
     Content: |
-      I'm **Md Sayfullah Sayeb**, but you can call me **Sayeb** or **সাইব** `(Bangla)`. I was born and still reside in Bangladesh. I'm currently the Co-founder of [**Labartise**](https://labartise.com/), an Indian startup specializing in web-based operations.
+      I'm **Md Sayfullah Sayeb**, but you can call me **Sayeb** or **সাইব** `(Bangla)`. I was born and still reside in Bangladesh. I'm currently the Co-founder of <a href="https://labartise.com/" target="_blank" style="color: #f5a97f;"><strong>Labartise</strong></a>, an Indian startup specializing in web-based operations.
 
       I'm a passionate web developer and tech enthusiast who loves solving web-based problems, building websites, creating mods for games, and making mobile apps.
 
       Outside of work, I enjoy reading, playing video games, and listening to music and audiobooks. I'm interested in privacy, security, and translations, and I also enjoy slow walks on summer nights. Plus, I laugh at my own jokes!
 
-      Just because something is my interest doesn't mean that I must be particularly good at it. Over the years, I've worked on exciting projects and learned new technologies, which you can find on my [**GitHub**](https://github.com/mdsayeb7?tab=repositories). I'm still continuing to learn. 
+      Just because something is my interest doesn't mean that I must be particularly good at it. Over the years, I've worked on exciting projects and learned new technologies, which you can find on my <a href="https://github.com/mdsayeb7?tab=repositories" target="_blank" rel="noopener noreferrer" style="color: #f5a97f;"><strong>GitHub</strong></a>
+      . I'm still continuing to learn. 
 
-      To know more about me and my presence, check out the [**About Me**](/about) page or view [**View Resume**](/). Additionally, here is a directory of my socials.
+      To know more about me and my presence, check out the <a href="/about" style="color: #f5a97f;"><strong>About Me</strong></a> page or view <a href="/" style="color: #f5a97f;"><strong>View Resume</strong></a>. Additionally, here is a directory of my socials.
 
-      - [**GitHub**](https://github.com/mdsayeb7) (`mdsayeb7`)
-      - [**Telegram**](https://t.me/sayeb7) (`@sayeb7`)
-      - [**Telegram Channel**](https://t.me/sayfullahsayeb) (`@sayfullahsayeb`)
-      - [**LinkedIn**](https://www.linkedin.com/in/sayfullahsayeb/) (`sayfullahsayeb`)
-      - [**Email**](mailto:sayfullah.sayeb@gmail.com) (`sayfullah.sayeb@gmail.com`)
-      - [**RSS**](/index.xml) (`index.xml`)
+      - <a href="https://github.com/mdsayeb7" target="_blank"   style="color: #f5a97f;"><strong>GitHub</strong></a>   (`mdsayeb7`)
+      - <a href="https://t.me/sayeb7" target="_blank"  style="color: #f5a97f;"><strong>Telegram</strong></a>  (`@sayeb7`)
+      - <a href="https://t.me/sayfullahsayeb" target="_blank" style="color: #f5a97f;"><strong>Telegram Channel</strong></a> (`@sayfullahsayeb`)
+      - <a href="https://www.linkedin.com/in/sayfullahsayeb/" target="_blank" style="color: #f5a97f;  "><strong>LinkedIn</strong></a> (`sayfullahsayeb`)
+      - <a href="mailto:sayfullah.sayeb@gmail.com"      target="_blank" style="color: #f5a97f;"><strong>Email</strong></a> (`sayfullah.sayeb@gmail.com`)
+      - <a href="/index.xml" target="_blank" style="color: #f5a97f;"><strong>RSS</strong></a> (`index.xml`)
+
 
       <br> <br>  
 
@@ -162,15 +164,17 @@ menu:
       weight: 25
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-pygmentsUseClasses: true
 markup:
-  highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    goldmark:
+        renderer:
+            unsafe: true
+#     highlight:
+#         # anchorLineNos: true
+#         codeFences: true
+#         guessSyntax: true
+#         lineNos: true
+#         # noClasses: false
+#         style: monokai
 #languages:
 #  en:
 #    languageName: "English"
@@ -178,3 +182,8 @@ markup:
 #  bn:
 #    languageName: "বাংলা"
 #    weight: 2
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
