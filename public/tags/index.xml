@@ -11,20 +11,34 @@
     </image>
     <generator>Hugo -- 0.142.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 31 Jan 2025 01:57:52 +0600</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2024 03:12:00 +0600</lastBuildDate>
     <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Okr</title>
-      <link>//localhost:1313/tags/okr/</link>
-      <pubDate>Fri, 31 Jan 2025 01:57:52 +0600</pubDate>
-      <guid>//localhost:1313/tags/okr/</guid>
+      <title>Github</title>
+      <link>//localhost:1313/tags/github/</link>
+      <pubDate>Sun, 08 Dec 2024 03:12:00 +0600</pubDate>
+      <guid>//localhost:1313/tags/github/</guid>
       <description></description>
     </item>
     <item>
-      <title>Year-Review</title>
-      <link>//localhost:1313/tags/year-review/</link>
-      <pubDate>Fri, 31 Jan 2025 01:57:52 +0600</pubDate>
-      <guid>//localhost:1313/tags/year-review/</guid>
+      <title>Wordpress</title>
+      <link>//localhost:1313/tags/wordpress/</link>
+      <pubDate>Tue, 04 Jun 2024 01:47:00 +0600</pubDate>
+      <guid>//localhost:1313/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Server</title>
+      <link>//localhost:1313/tags/server/</link>
+      <pubDate>Thu, 04 Apr 2024 03:08:00 +0600</pubDate>
+      <guid>//localhost:1313/tags/server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>App Review</title>
+      <link>//localhost:1313/tags/app-review/</link>
+      <pubDate>Fri, 12 Jan 2024 10:39:00 +0600</pubDate>
+      <guid>//localhost:1313/tags/app-review/</guid>
       <description></description>
     </item>
   </channel>

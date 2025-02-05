@@ -1,0 +1,330 @@
+<!doctype html><html lang=en dir=auto><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>.htaccess | Sayfullah Sayeb</title>
+<meta name=keywords content="wordpress"><meta name=description content=' https://pagespeed.web.dev/
+https://securityheaders.com/
+https://www.webpagetest.org/
+https://hackertarget.com/wordpress-security-scan/
+
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod\_rewrite.c>
+RewriteEngine On
+RewriteRule .\* - \[E=HTTP\_AUTHORIZATION:%{HTTP:Authorization}\]
+RewriteBase /
+RewriteRule ^index\\.php$ - \[L\]
+RewriteCond %{REQUEST\_FILENAME} !-f
+RewriteCond %{REQUEST\_FILENAME} !-d
+RewriteRule . /index.php \[L\]
+</IfModule>
+
+# END WordPress
+
+# BEGIN Headers Security Advanced & HSTS WP 5.0.28
+<IfModule mod\_headers.c>
+Header set Access-Control-Allow-Methods "GET,POST"
+Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+Header set Content-Security-Policy "upgrade-insecure-requests;"
+Header set Cross-Origin-Embedder-Policy "unsafe-none; report-to=&#39;default&#39;"
+Header set Cross-Origin-Embedder-Policy-Report-Only "unsafe-none; report-to=&#39;default&#39;"
+Header set Cross-Origin-Opener-Policy "unsafe-none"
+Header set Cross-Origin-Opener-Policy-Report-Only "unsafe-none; report-to=&#39;default&#39;"
+Header set Cross-Origin-Resource-Policy "cross-origin"
+Header set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(self), encrypted-media=(), fullscreen=\*, geolocation=(self), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=\*, picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), gamepad=(), serial=()"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Strict-Transport-Security "max-age=63072000"
+Header set X-Content-Security-Policy "default-src &#39;self&#39;; img-src \*; media-src \* data:;"
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Permitted-Cross-Domain-Policies "none"
+</IfModule>
+# END Headers Security Advanced & HSTS WP
+
+
+# protect .htaccess
+<Files ~ "^.\*\\.(\[Hh\]\[Tt\]\[Aa\])">
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+# protect wpconfig.php 
+<files wp-config.php> 
+  order allow,deny 
+  deny from all 
+</files>
+
+#directory browsing block
+Options All -Indexes
+
+# Block WordPress xmlrpc.php requests
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+</Files>
+
+# BEGIN block author scans
+RewriteEngine On
+RewriteBase /
+RewriteCond %{QUERY\_STRING} (author=\\d+) \[NC\]
+RewriteRule .\* - \[F\]
+# END block author scans
+
+
+# protect the .htaccess
+<files .htaccess> 
+  order allow,deny 
+  deny from all 
+</files>
+
+
+{{{{{{in wp-Content
+create .htaccess
+paste code}}}}}}
+
+
+# wp-content access deny
+Order deny,allow
+    Deny from all
+    <Files ~ "".(xml|css|jpe?g|png|gif|js)$"">
+    Allow from all
+    </Files>
+
+
+
+> create a new .htaccess file in wp-content/uploads directory & put the codes there:
+# uploads directory access deny
+<Files \*.php>
+deny from all
+</Files>
+# Block executables
+<FilesMatch ""\\.(php|phtml|php3|php4|php5|pl|py|jsp|asp|html|htm|shtml|sh|cgi|suspected)$"">
+    deny from all
+</FilesMatch>
+
+
+wordfence
+62ae96abbc505f813e0de5ca850391957685866faebd87550a664a902773535f83a07d71a729955aa513322a0e958520b1de578b5a932d0c2b1508a1c6674795
+'><meta name=author content="Sayfullah Sayeb"><link rel=canonical href=//localhost:1313/2023/12/htaccess.html><link crossorigin=anonymous href=/assets/css/stylesheet.e268a3875e92790fb13144d41f6ac7da9e4c6cee10f483c284a0d08940ae6704.css integrity="sha256-4mijh16SeQ+xMUTUH2rH2p5MbO4Q9IPChKDQiUCuZwQ=" rel="preload stylesheet" as=style><link rel=icon href=//localhost:1313/favicon.ico><link rel=icon type=image/png sizes=16x16 href=//localhost:1313/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=//localhost:1313/favicon-32x32.png><link rel=apple-touch-icon href=//localhost:1313/apple-touch-icon.png><link rel=mask-icon href=//localhost:1313/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=//localhost:1313/2023/12/htaccess.html><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:url" content="//localhost:1313/2023/12/htaccess.html"><meta property="og:site_name" content="Sayfullah Sayeb"><meta property="og:title" content=".htaccess"><meta property="og:description" content=' https://pagespeed.web.dev/
+https://securityheaders.com/ https://www.webpagetest.org/ https://hackertarget.com/wordpress-security-scan/ # BEGIN WordPress # The directives (lines) between "BEGIN WordPress" and "END WordPress" are # dynamically generated, and should only be modified via WordPress filters. # Any changes to the directives between these markers will be overwritten. <IfModule mod\_rewrite.c> RewriteEngine On RewriteRule .\* - \[E=HTTP\_AUTHORIZATION:%{HTTP:Authorization}\] RewriteBase / RewriteRule ^index\\.php$ - \[L\] RewriteCond %{REQUEST\_FILENAME} !-f RewriteCond %{REQUEST\_FILENAME} !-d RewriteRule . /index.php \[L\] </IfModule> # END WordPress # BEGIN Headers Security Advanced & HSTS WP 5.0.28 <IfModule mod\_headers.c> Header set Access-Control-Allow-Methods "GET,POST" Header set Access-Control-Allow-Headers "Content-Type, Authorization" Header set Content-Security-Policy "upgrade-insecure-requests;" Header set Cross-Origin-Embedder-Policy "unsafe-none; report-to=&#39;default&#39;" Header set Cross-Origin-Embedder-Policy-Report-Only "unsafe-none; report-to=&#39;default&#39;" Header set Cross-Origin-Opener-Policy "unsafe-none" Header set Cross-Origin-Opener-Policy-Report-Only "unsafe-none; report-to=&#39;default&#39;" Header set Cross-Origin-Resource-Policy "cross-origin" Header set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(self), encrypted-media=(), fullscreen=\*, geolocation=(self), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=\*, picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), gamepad=(), serial=()" Header set Referrer-Policy "strict-origin-when-cross-origin" Header set Strict-Transport-Security "max-age=63072000" Header set X-Content-Security-Policy "default-src &#39;self&#39;; img-src \*; media-src \* data:;" Header set X-Content-Type-Options "nosniff" Header set X-Frame-Options "SAMEORIGIN" Header set X-XSS-Protection "1; mode=block" Header set X-Permitted-Cross-Domain-Policies "none" </IfModule> # END Headers Security Advanced & HSTS WP # protect .htaccess <Files ~ "^.\*\\.(\[Hh\]\[Tt\]\[Aa\])"> Order allow,deny Deny from all Satisfy all </Files> # protect wpconfig.php <files wp-config.php> order allow,deny deny from all </files> #directory browsing block Options All -Indexes # Block WordPress xmlrpc.php requests <Files xmlrpc.php> order deny,allow deny from all </Files> # BEGIN block author scans RewriteEngine On RewriteBase / RewriteCond %{QUERY\_STRING} (author=\\d+) \[NC\] RewriteRule .\* - \[F\] # END block author scans # protect the .htaccess <files .htaccess> order allow,deny deny from all </files> {{{{{{in wp-Content create .htaccess paste code}}}}}} # wp-content access deny Order deny,allow Deny from all <Files ~ "".(xml|css|jpe?g|png|gif|js)$""> Allow from all </Files> > create a new .htaccess file in wp-content/uploads directory & put the codes there: # uploads directory access deny <Files \*.php> deny from all </Files> # Block executables <FilesMatch ""\\.(php|phtml|php3|php4|php5|pl|py|jsp|asp|html|htm|shtml|sh|cgi|suspected)$""> deny from all </FilesMatch> wordfence 62ae96abbc505f813e0de5ca850391957685866faebd87550a664a902773535f83a07d71a729955aa513322a0e958520b1de578b5a932d0c2b1508a1c6674795 '><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-12-08T20:33:00+06:00"><meta property="article:modified_time" content="2023-12-08T20:33:00+06:00"><meta property="article:tag" content="Wordpress"><meta property="og:image" content="//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content=".htaccess"><meta name=twitter:description content=' https://pagespeed.web.dev/
+https://securityheaders.com/
+https://www.webpagetest.org/
+https://hackertarget.com/wordpress-security-scan/
+
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod\_rewrite.c>
+RewriteEngine On
+RewriteRule .\* - \[E=HTTP\_AUTHORIZATION:%{HTTP:Authorization}\]
+RewriteBase /
+RewriteRule ^index\\.php$ - \[L\]
+RewriteCond %{REQUEST\_FILENAME} !-f
+RewriteCond %{REQUEST\_FILENAME} !-d
+RewriteRule . /index.php \[L\]
+</IfModule>
+
+# END WordPress
+
+# BEGIN Headers Security Advanced & HSTS WP 5.0.28
+<IfModule mod\_headers.c>
+Header set Access-Control-Allow-Methods "GET,POST"
+Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+Header set Content-Security-Policy "upgrade-insecure-requests;"
+Header set Cross-Origin-Embedder-Policy "unsafe-none; report-to=&#39;default&#39;"
+Header set Cross-Origin-Embedder-Policy-Report-Only "unsafe-none; report-to=&#39;default&#39;"
+Header set Cross-Origin-Opener-Policy "unsafe-none"
+Header set Cross-Origin-Opener-Policy-Report-Only "unsafe-none; report-to=&#39;default&#39;"
+Header set Cross-Origin-Resource-Policy "cross-origin"
+Header set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(self), encrypted-media=(), fullscreen=\*, geolocation=(self), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=\*, picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), gamepad=(), serial=()"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Strict-Transport-Security "max-age=63072000"
+Header set X-Content-Security-Policy "default-src &#39;self&#39;; img-src \*; media-src \* data:;"
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Permitted-Cross-Domain-Policies "none"
+</IfModule>
+# END Headers Security Advanced & HSTS WP
+
+
+# protect .htaccess
+<Files ~ "^.\*\\.(\[Hh\]\[Tt\]\[Aa\])">
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+# protect wpconfig.php 
+<files wp-config.php> 
+  order allow,deny 
+  deny from all 
+</files>
+
+#directory browsing block
+Options All -Indexes
+
+# Block WordPress xmlrpc.php requests
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+</Files>
+
+# BEGIN block author scans
+RewriteEngine On
+RewriteBase /
+RewriteCond %{QUERY\_STRING} (author=\\d+) \[NC\]
+RewriteRule .\* - \[F\]
+# END block author scans
+
+
+# protect the .htaccess
+<files .htaccess> 
+  order allow,deny 
+  deny from all 
+</files>
+
+
+{{{{{{in wp-Content
+create .htaccess
+paste code}}}}}}
+
+
+# wp-content access deny
+Order deny,allow
+    Deny from all
+    <Files ~ "".(xml|css|jpe?g|png|gif|js)$"">
+    Allow from all
+    </Files>
+
+
+
+> create a new .htaccess file in wp-content/uploads directory & put the codes there:
+# uploads directory access deny
+<Files \*.php>
+deny from all
+</Files>
+# Block executables
+<FilesMatch ""\\.(php|phtml|php3|php4|php5|pl|py|jsp|asp|html|htm|shtml|sh|cgi|suspected)$"">
+    deny from all
+</FilesMatch>
+
+
+wordfence
+62ae96abbc505f813e0de5ca850391957685866faebd87550a664a902773535f83a07d71a729955aa513322a0e958520b1de578b5a932d0c2b1508a1c6674795
+'><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts / index","item":"//localhost:1313/posts/"},{"@type":"ListItem","position":2,"name":".htaccess","item":"//localhost:1313/2023/12/htaccess.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":".htaccess","name":".htaccess","description":" https://pagespeed.web.dev/\nhttps://securityheaders.com/ https://www.webpagetest.org/ https://hackertarget.com/wordpress-security-scan/ # BEGIN WordPress # The directives (lines) between \u0026#34;BEGIN WordPress\u0026#34; and \u0026#34;END WordPress\u0026#34; are # dynamically generated, and should only be modified via WordPress filters. # Any changes to the directives between these markers will be overwritten. \u0026lt;IfModule mod\\_rewrite.c\u0026gt; RewriteEngine On RewriteRule .\\* - \\[E=HTTP\\_AUTHORIZATION:%{HTTP:Authorization}\\] RewriteBase / RewriteRule ^index\\\\.php$ - \\[L\\] RewriteCond %{REQUEST\\_FILENAME} !-f RewriteCond %{REQUEST\\_FILENAME} !-d RewriteRule . /index.php \\[L\\] \u0026lt;/IfModule\u0026gt; # END WordPress # BEGIN Headers Security Advanced \u0026amp; HSTS WP 5.0.28 \u0026lt;IfModule mod\\_headers.c\u0026gt; Header set Access-Control-Allow-Methods \u0026#34;GET,POST\u0026#34; Header set Access-Control-Allow-Headers \u0026#34;Content-Type, Authorization\u0026#34; Header set Content-Security-Policy \u0026#34;upgrade-insecure-requests;\u0026#34; Header set Cross-Origin-Embedder-Policy \u0026#34;unsafe-none; report-to=\u0026#39;default\u0026#39;\u0026#34; Header set Cross-Origin-Embedder-Policy-Report-Only \u0026#34;unsafe-none; report-to=\u0026#39;default\u0026#39;\u0026#34; Header set Cross-Origin-Opener-Policy \u0026#34;unsafe-none\u0026#34; Header set Cross-Origin-Opener-Policy-Report-Only \u0026#34;unsafe-none; report-to=\u0026#39;default\u0026#39;\u0026#34; Header set Cross-Origin-Resource-Policy \u0026#34;cross-origin\u0026#34; Header set Permissions-Policy \u0026#34;accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(self), encrypted-media=(), fullscreen=\\*, geolocation=(self), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=\\*, picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), gamepad=(), serial=()\u0026#34; Header set Referrer-Policy \u0026#34;strict-origin-when-cross-origin\u0026#34; Header set Strict-Transport-Security \u0026#34;max-age=63072000\u0026#34; Header set X-Content-Security-Policy \u0026#34;default-src \u0026#39;self\u0026#39;; img-src \\*; media-src \\* data:;\u0026#34; Header set X-Content-Type-Options \u0026#34;nosniff\u0026#34; Header set X-Frame-Options \u0026#34;SAMEORIGIN\u0026#34; Header set X-XSS-Protection \u0026#34;1; mode=block\u0026#34; Header set X-Permitted-Cross-Domain-Policies \u0026#34;none\u0026#34; \u0026lt;/IfModule\u0026gt; # END Headers Security Advanced \u0026amp; HSTS WP # protect .htaccess \u0026lt;Files ~ \u0026#34;^.\\*\\\\.(\\[Hh\\]\\[Tt\\]\\[Aa\\])\u0026#34;\u0026gt; Order allow,deny Deny from all Satisfy all \u0026lt;/Files\u0026gt; # protect wpconfig.php \u0026lt;files wp-config.php\u0026gt; order allow,deny deny from all \u0026lt;/files\u0026gt; #directory browsing block Options All -Indexes # Block WordPress xmlrpc.php requests \u0026lt;Files xmlrpc.php\u0026gt; order deny,allow deny from all \u0026lt;/Files\u0026gt; # BEGIN block author scans RewriteEngine On RewriteBase / RewriteCond %{QUERY\\_STRING} (author=\\\\d+) \\[NC\\] RewriteRule .\\* - \\[F\\] # END block author scans # protect the .htaccess \u0026lt;files .htaccess\u0026gt; order allow,deny deny from all \u0026lt;/files\u0026gt; {{{{{{in wp-Content create .htaccess paste code}}}}}} # wp-content access deny Order deny,allow Deny from all \u0026lt;Files ~ \u0026#34;\u0026#34;.(xml|css|jpe?g|png|gif|js)$\u0026#34;\u0026#34;\u0026gt; Allow from all \u0026lt;/Files\u0026gt; \u0026gt; create a new .htaccess file in wp-content/uploads directory \u0026amp; put the codes there: # uploads directory access deny \u0026lt;Files \\*.php\u0026gt; deny from all \u0026lt;/Files\u0026gt; # Block executables \u0026lt;FilesMatch \u0026#34;\u0026#34;\\\\.(php|phtml|php3|php4|php5|pl|py|jsp|asp|html|htm|shtml|sh|cgi|suspected)$\u0026#34;\u0026#34;\u0026gt; deny from all \u0026lt;/FilesMatch\u0026gt; wordfence 62ae96abbc505f813e0de5ca850391957685866faebd87550a664a902773535f83a07d71a729955aa513322a0e958520b1de578b5a932d0c2b1508a1c6674795 ","keywords":["wordpress"],"articleBody":" https://pagespeed.web.dev/\nhttps://securityheaders.com/ https://www.webpagetest.org/ https://hackertarget.com/wordpress-security-scan/ # BEGIN WordPress # The directives (lines) between \"BEGIN WordPress\" and \"END WordPress\" are # dynamically generated, and should only be modified via WordPress filters. # Any changes to the directives between these markers will be overwritten. RewriteEngine On RewriteRule .\\* - \\[E=HTTP\\_AUTHORIZATION:%{HTTP:Authorization}\\] RewriteBase / RewriteRule ^index\\\\.php$ - \\[L\\] RewriteCond %{REQUEST\\_FILENAME} !-f RewriteCond %{REQUEST\\_FILENAME} !-d RewriteRule . /index.php \\[L\\] # END WordPress # BEGIN Headers Security Advanced \u0026 HSTS WP 5.0.28 Header set Access-Control-Allow-Methods \"GET,POST\" Header set Access-Control-Allow-Headers \"Content-Type, Authorization\" Header set Content-Security-Policy \"upgrade-insecure-requests;\" Header set Cross-Origin-Embedder-Policy \"unsafe-none; report-to='default'\" Header set Cross-Origin-Embedder-Policy-Report-Only \"unsafe-none; report-to='default'\" Header set Cross-Origin-Opener-Policy \"unsafe-none\" Header set Cross-Origin-Opener-Policy-Report-Only \"unsafe-none; report-to='default'\" Header set Cross-Origin-Resource-Policy \"cross-origin\" Header set Permissions-Policy \"accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(self), encrypted-media=(), fullscreen=\\*, geolocation=(self), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=\\*, picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), gamepad=(), serial=()\" Header set Referrer-Policy \"strict-origin-when-cross-origin\" Header set Strict-Transport-Security \"max-age=63072000\" Header set X-Content-Security-Policy \"default-src 'self'; img-src \\*; media-src \\* data:;\" Header set X-Content-Type-Options \"nosniff\" Header set X-Frame-Options \"SAMEORIGIN\" Header set X-XSS-Protection \"1; mode=block\" Header set X-Permitted-Cross-Domain-Policies \"none\" # END Headers Security Advanced \u0026 HSTS WP # protect .htaccess ","wordCount":"321","inLanguage":"en","image":"//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2023-12-08T20:33:00+06:00","dateModified":"2023-12-08T20:33:00+06:00","author":{"@type":"Person","name":"Sayfullah Sayeb"},"mainEntityOfPage":{"@type":"WebPage","@id":"//localhost:1313/2023/12/htaccess.html"},"publisher":{"@type":"Organization","name":"Sayfullah Sayeb","logo":{"@type":"ImageObject","url":"//localhost:1313/favicon.ico"}}}</script></head><body class=dark id=top><header class=header><nav class=nav><div class=logo><a href=//localhost:1313/ accesskey=h title="Sayfullah Sayeb (Alt + H)">Sayfullah Sayeb</a><div class=logo-switches></div></div><ul id=menu><li><a href=//localhost:1313/ title="Main Page"><span>Main Page</span></a></li><li><a href=//localhost:1313/about/ title=About><span>About</span></a></li><li><a href=//localhost:1313/posts/ title=Posts><span>Posts</span></a></li><li><a href=//localhost:1313/projects/ title=Projects><span>Projects</span></a></li><li><a href=//localhost:1313/photography/ title=Photography><span>Photography</span></a></li><li><a href=//localhost:1313/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=//localhost:1313/>Home</a>&nbsp;»&nbsp;<a href=//localhost:1313/posts/>Posts / index</a></div><h1 class="post-title entry-hint-parent">.htaccess</h1><div class=post-meta><span title='2023-12-08 20:33:00 +0600 +06'>December 8, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Sayfullah Sayeb</div></header><div class=post-content><p> https://pagespeed.web.dev/</p><pre tabindex=0><code>https://securityheaders.com/
+https://www.webpagetest.org/
+https://hackertarget.com/wordpress-security-scan/
+
+
+# BEGIN WordPress
+# The directives (lines) between &#34;BEGIN WordPress&#34; and &#34;END WordPress&#34; are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+&lt;IfModule mod\_rewrite.c&gt;
+RewriteEngine On
+RewriteRule .\* - \[E=HTTP\_AUTHORIZATION:%{HTTP:Authorization}\]
+RewriteBase /
+RewriteRule ^index\\.php$ - \[L\]
+RewriteCond %{REQUEST\_FILENAME} !-f
+RewriteCond %{REQUEST\_FILENAME} !-d
+RewriteRule . /index.php \[L\]
+&lt;/IfModule&gt;
+
+# END WordPress
+
+# BEGIN Headers Security Advanced &amp; HSTS WP 5.0.28
+&lt;IfModule mod\_headers.c&gt;
+Header set Access-Control-Allow-Methods &#34;GET,POST&#34;
+Header set Access-Control-Allow-Headers &#34;Content-Type, Authorization&#34;
+Header set Content-Security-Policy &#34;upgrade-insecure-requests;&#34;
+Header set Cross-Origin-Embedder-Policy &#34;unsafe-none; report-to=&#39;default&#39;&#34;
+Header set Cross-Origin-Embedder-Policy-Report-Only &#34;unsafe-none; report-to=&#39;default&#39;&#34;
+Header set Cross-Origin-Opener-Policy &#34;unsafe-none&#34;
+Header set Cross-Origin-Opener-Policy-Report-Only &#34;unsafe-none; report-to=&#39;default&#39;&#34;
+Header set Cross-Origin-Resource-Policy &#34;cross-origin&#34;
+Header set Permissions-Policy &#34;accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(self), encrypted-media=(), fullscreen=\*, geolocation=(self), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=\*, picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), gamepad=(), serial=()&#34;
+Header set Referrer-Policy &#34;strict-origin-when-cross-origin&#34;
+Header set Strict-Transport-Security &#34;max-age=63072000&#34;
+Header set X-Content-Security-Policy &#34;default-src &#39;self&#39;; img-src \*; media-src \* data:;&#34;
+Header set X-Content-Type-Options &#34;nosniff&#34;
+Header set X-Frame-Options &#34;SAMEORIGIN&#34;
+Header set X-XSS-Protection &#34;1; mode=block&#34;
+Header set X-Permitted-Cross-Domain-Policies &#34;none&#34;
+&lt;/IfModule&gt;
+# END Headers Security Advanced &amp; HSTS WP
+
+
+# protect .htaccess
+&lt;Files ~ &#34;^.\*\\.(\[Hh\]\[Tt\]\[Aa\])&#34;&gt;
+	Order allow,deny
+	Deny from all
+	Satisfy all
+&lt;/Files&gt;
+
+# protect wpconfig.php 
+&lt;files wp-config.php&gt; 
+  order allow,deny 
+  deny from all 
+&lt;/files&gt;
+
+#directory browsing block
+Options All -Indexes
+
+# Block WordPress xmlrpc.php requests
+&lt;Files xmlrpc.php&gt;
+order deny,allow
+deny from all
+&lt;/Files&gt;
+
+# BEGIN block author scans
+RewriteEngine On
+RewriteBase /
+RewriteCond %{QUERY\_STRING} (author=\\d+) \[NC\]
+RewriteRule .\* - \[F\]
+# END block author scans
+
+
+# protect the .htaccess
+&lt;files .htaccess&gt; 
+  order allow,deny 
+  deny from all 
+&lt;/files&gt;
+
+
+{{{{{{in wp-Content
+create .htaccess
+paste code}}}}}}
+
+
+# wp-content access deny
+Order deny,allow
+    Deny from all
+    &lt;Files ~ &#34;&#34;.(xml|css|jpe?g|png|gif|js)$&#34;&#34;&gt;
+    Allow from all
+    &lt;/Files&gt;
+
+
+
+&gt; create a new .htaccess file in wp-content/uploads directory &amp; put the codes there:
+# uploads directory access deny
+&lt;Files \*.php&gt;
+deny from all
+&lt;/Files&gt;
+# Block executables
+&lt;FilesMatch &#34;&#34;\\.(php|phtml|php3|php4|php5|pl|py|jsp|asp|html|htm|shtml|sh|cgi|suspected)$&#34;&#34;&gt;
+    deny from all
+&lt;/FilesMatch&gt;
+
+
+wordfence
+62ae96abbc505f813e0de5ca850391957685866faebd87550a664a902773535f83a07d71a729955aa513322a0e958520b1de578b5a932d0c2b1508a1c6674795
+</code></pre></div><footer class=post-footer><ul class=post-tags><li><a href=//localhost:1313/tags/wordpress/>Wordpress</a></li></ul><nav class=paginav><a class=prev href=//localhost:1313/2023/12/admin-dashboard.html><span class=title>« Prev</span><br><span>admin dashboard</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=//localhost:1313/>Sayfullah Sayeb</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a><p>Content is published under <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC BY-NC-SA 4.0 license</a>.</p><p>Thanks to rail, whose website design inspired this site's design.</p></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

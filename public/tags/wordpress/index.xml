@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Wordpress on Sayfullah Sayeb</title>
+    <link>//localhost:1313/tags/wordpress/</link>
+    <description>Recent content in Wordpress on Sayfullah Sayeb</description>
+    <image>
+      <title>Sayfullah Sayeb</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 04 Jun 2024 01:47:00 +0600</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom Date-Specific Product Badges</title>
+      <link>//localhost:1313/2024/06/custom-date-specific-product-badges.html</link>
+      <pubDate>Tue, 04 Jun 2024 01:47:00 +0600</pubDate>
+      <guid>//localhost:1313/2024/06/custom-date-specific-product-badges.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blogger.googleusercontent.com/img/a/AVvXsEjzQcnP39aCzmn8fidInHmnPwldHpKHtD8cB5KdEbHjFSQ0CN7ol0JIpUsizsMDy02R1hti_YTLFl6bCRiC4B00H6skLr_P88Ju47QQpUVVLjmSov4X1JSpZHJTHUma9DlmLMxa9DHPBuJshfRBNFpPrCdZjurNa-T7lrPGivgvmuO1ouhZ4qzgPM-tkbnt&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blogger.googleusercontent.com/img/a/AVvXsEjzQcnP39aCzmn8fidInHmnPwldHpKHtD8cB5KdEbHjFSQ0CN7ol0JIpUsizsMDy02R1hti_YTLFl6bCRiC4B00H6skLr_P88Ju47QQpUVVLjmSov4X1JSpZHJTHUma9DlmLMxa9DHPBuJshfRBNFpPrCdZjurNa-T7lrPGivgvmuO1ouhZ4qzgPM-tkbnt&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; // Add custom fields to WooCommerce backend under General tab&lt;/p&gt;
+&lt;p&gt;add_action( &amp;lsquo;woocommerce_product_options_general_product_data&amp;rsquo;, &amp;lsquo;wpsh_add_text_field_below_sale_price&amp;rsquo; );&lt;/p&gt;
+&lt;p&gt;function wpsh_add_text_field_below_sale_price() {&lt;/p&gt;
+&lt;p&gt;    global $product_object;&lt;/p&gt;
+&lt;p&gt;    // Original custom field&lt;/p&gt;
+&lt;p&gt;    woocommerce_wp_text_input( array(&lt;/p&gt;
+&lt;p&gt;        &amp;lsquo;id&amp;rsquo;            =&amp;gt; &amp;lsquo;_badge&amp;rsquo;,&lt;/p&gt;
+&lt;p&gt;        &amp;rsquo;label&amp;rsquo;         =&amp;gt; __( &amp;lsquo;Badge text&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),&lt;/p&gt;
+&lt;p&gt;        &amp;lsquo;description&amp;rsquo;   =&amp;gt; __( &amp;lsquo;Enter your pduct badge text here&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),&lt;/p&gt;
+&lt;p&gt;        &amp;lsquo;desc_tip&amp;rsquo;      =&amp;gt; &amp;rsquo;true&amp;rsquo;,&lt;/p&gt;
+&lt;p&gt;        &amp;rsquo;type&amp;rsquo;          =&amp;gt; &amp;rsquo;text&amp;rsquo;,&lt;/p&gt;
+&lt;p&gt;        &amp;lsquo;value&amp;rsquo;         =&amp;gt; $product_object-&amp;gt;get_meta( &amp;lsquo;_badge&amp;rsquo; ),&lt;/p&gt;
+&lt;p&gt;    ) );&lt;/p&gt;
+&lt;p&gt;    // Start date field&lt;/p&gt;
+&lt;p&gt;    woocommerce_wp_text_input( array(&lt;/p&gt;
+&lt;p&gt;        &amp;lsquo;id&amp;rsquo;                =&amp;gt; &amp;lsquo;_start_date&amp;rsquo;,&lt;/p&gt;
+&lt;p&gt;        &amp;rsquo;label&amp;rsquo;             =&amp;gt; __( &amp;lsquo;Dislay start date&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Daraz Mall</title>
+      <link>//localhost:1313/2024/05/daraz-mall.html</link>
+      <pubDate>Wed, 01 May 2024 21:37:00 +0600</pubDate>
+      <guid>//localhost:1313/2024/05/daraz-mall.html</guid>
+      <description>&lt;p&gt;// Add custom meta field for marking product as plaza&lt;br&gt;
+add_action( &amp;lsquo;woocommerce_product_data_panels&amp;rsquo;, &amp;lsquo;add_plaza_product_field&amp;rsquo; );&lt;br&gt;
+function add_plaza_product_field() {&lt;br&gt;
+    global $post;&lt;br&gt;
+    // Check if product type is simple or grouped    if ( in_array( $post-&amp;gt;post_type, array( &amp;lsquo;product&amp;rsquo;, &amp;lsquo;product_variation&amp;rsquo; ) ) ) {        // For simple products        if ( ! $post-&amp;gt;post_parent ) {            woocommerce_wp_checkbox(                array(                    &amp;lsquo;id&amp;rsquo; =&amp;gt; &amp;lsquo;_is_plaza_product&amp;rsquo;,                    &amp;rsquo;label&amp;rsquo; =&amp;gt; __( &amp;lsquo;Mark as Plaza Product&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),                    &amp;lsquo;description&amp;rsquo; =&amp;gt; __( &amp;lsquo;Check this box if this product is plaza.&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),                    &amp;lsquo;desc_tip&amp;rsquo; =&amp;gt; true,                    &amp;lsquo;value&amp;rsquo; =&amp;gt; get_post_meta( $post-&amp;gt;ID, &amp;lsquo;_is_plaza_product&amp;rsquo;, true )                )            );        }&lt;br&gt;
+        // For grouped products        elseif ( $post-&amp;gt;post_parent &amp;amp;&amp;amp; get_post_type( $post-&amp;gt;post_parent ) === &amp;lsquo;product&amp;rsquo; ) {            woocommerce_wp_checkbox(                array(                    &amp;lsquo;id&amp;rsquo; =&amp;gt; &amp;lsquo;_is_plaza_product_grouped&amp;rsquo;,                    &amp;rsquo;label&amp;rsquo; =&amp;gt; __( &amp;lsquo;Mark as Plaza Product&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),                    &amp;lsquo;description&amp;rsquo; =&amp;gt; __( &amp;lsquo;Check this box if this grouped product is plaza.&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),                    &amp;lsquo;desc_tip&amp;rsquo; =&amp;gt; true,                    &amp;lsquo;value&amp;rsquo; =&amp;gt; get_post_meta( $post-&amp;gt;ID, &amp;lsquo;_is_plaza_product_grouped&amp;rsquo;, true )                )            );        }    }}&lt;br&gt;
+// Save custom meta field value for simple products&lt;br&gt;
+add_action( &amp;lsquo;woocommerce_process_product_meta&amp;rsquo;, &amp;lsquo;save_plaza_product_field&amp;rsquo; );&lt;br&gt;
+function save_plaza_product_field( $product_id ) {&lt;br&gt;
+    $is_plaza_product = isset( $_POST[&amp;rsquo;_is_plaza_product&amp;rsquo;] ) ? &amp;lsquo;yes&amp;rsquo; : &amp;rsquo;no&amp;rsquo;;    update_post_meta( $product_id, &amp;lsquo;_is_plaza_product&amp;rsquo;, $is_plaza_product );&lt;br&gt;
+    // If product is marked as plaza, assign it to &amp;ldquo;Plaza&amp;rdquo; category    if ( $is_plaza_product === &amp;lsquo;yes&amp;rsquo; ) {        $term = get_term_by( &amp;rsquo;name&amp;rsquo;, &amp;lsquo;Plaza&amp;rsquo;, &amp;lsquo;product_cat&amp;rsquo; );        if ( $term &amp;amp;&amp;amp; ! is_wp_error( $term ) ) {            wp_set_object_terms( $product_id, $term-&amp;gt;term_id, &amp;lsquo;product_cat&amp;rsquo;, true );        }    }}&lt;br&gt;
+// Save custom meta field value for grouped products&lt;br&gt;
+add_action( &amp;lsquo;woocommerce_process_product_meta_grouped&amp;rsquo;, &amp;lsquo;save_plaza_product_field_grouped&amp;rsquo; );&lt;br&gt;
+function save_plaza_product_field_grouped( $product_id ) {&lt;br&gt;
+    $is_plaza_product_grouped = isset( $_POST[&amp;rsquo;_is_plaza_product_grouped&amp;rsquo;] ) ? &amp;lsquo;yes&amp;rsquo; : &amp;rsquo;no&amp;rsquo;;    update_post_meta( $product_id, &amp;lsquo;_is_plaza_product_grouped&amp;rsquo;, $is_plaza_product_grouped );&lt;br&gt;
+    // If product is marked as plaza, assign it to &amp;ldquo;Plaza&amp;rdquo; category    if ( $is_plaza_product_grouped === &amp;lsquo;yes&amp;rsquo; ) {        $term = get_term_by( &amp;rsquo;name&amp;rsquo;, &amp;lsquo;Plaza&amp;rsquo;, &amp;lsquo;product_cat&amp;rsquo; );        if ( $term &amp;amp;&amp;amp; ! is_wp_error( $term ) ) {            wp_set_object_terms( $product_id, $term-&amp;gt;term_id, &amp;lsquo;product_cat&amp;rsquo;, true );        }    }}&lt;br&gt;
+// Add link around the image and title for plaza products&lt;br&gt;
+add_filter( &amp;rsquo;the_title&amp;rsquo;, &amp;lsquo;add_plaza_mark_to_title&amp;rsquo;, 10, 2 );&lt;br&gt;
+function add_plaza_mark_to_title( $title, $id ) {&lt;br&gt;
+    // Check if the title is being displayed in the frontend    if ( ! is_admin() ) {        $is_plaza_product = get_post_meta( $id, &amp;lsquo;_is_plaza_product&amp;rsquo;, true );        if ( $is_plaza_product === &amp;lsquo;yes&amp;rsquo; ) {            $image_url = &amp;lsquo;&lt;a href=&#34;https://noorexpress.shop/wp-content/uploads/2021/08/brand-alessi.png&#39;;&#34;&gt;https://noorexpress.shop/wp-content/uploads/2021/08/brand-alessi.png&#39;;&lt;/a&gt;            $image_target_url = &amp;lsquo;&lt;a href=&#34;https://noorexpress.shop/plaza/&#39;;&#34;&gt;https://noorexpress.shop/plaza/&#39;;&lt;/a&gt;            $product_permalink = get_permalink( $id );            $title = &amp;lsquo;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;rsquo; . $title . &amp;lsquo;&lt;!-- raw HTML omitted --&gt;&amp;rsquo;;        }    }    return $title;}&lt;br&gt;
+x&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Best wordpress backup plugin</title>
+      <link>//localhost:1313/2024/02/best-wordpress-backup-plugin.html</link>
+      <pubDate>Sun, 04 Feb 2024 04:20:00 +0600</pubDate>
+      <guid>//localhost:1313/2024/02/best-wordpress-backup-plugin.html</guid>
+      <description>&lt;p&gt;Wp - Vivid&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Plugin Info </title>
+      <link>//localhost:1313/2024/01/plugin-info.html</link>
+      <pubDate>Wed, 31 Jan 2024 17:17:00 +0600</pubDate>
+      <guid>//localhost:1313/2024/01/plugin-info.html</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Admin and Site Enhancements (ASE)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GTranslate&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WP-Optimize - Clean, Compress, Cache&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;White Label CMS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Code Snippets&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UpdraftPlus: WordPress Backup &amp;amp; Migration Plugin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;optimize&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;wpvivid&lt;/p&gt;
+&lt;p&gt;for security &lt;/p&gt;
+&lt;p&gt;wp hide&lt;/p&gt;
+&lt;p&gt;wordfence &lt;/p&gt;
+&lt;p&gt;for Analytics&lt;/p&gt;
+&lt;p&gt;Independent Analytics&lt;/p&gt;
+&lt;p&gt;===============================================================================================================================================================================================================================================================================================================================&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>.ht access code</title>
+      <link>//localhost:1313/2023/12/ht-access-code.html</link>
+      <pubDate>Wed, 13 Dec 2023 12:09:00 +0600</pubDate>
+      <guid>//localhost:1313/2023/12/ht-access-code.html</guid>
+      <description>&lt;p&gt;# BEGIN WordPress&lt;/p&gt;
+&lt;p&gt;RewriteEngine On&lt;/p&gt;
+&lt;p&gt;RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]&lt;/p&gt;
+&lt;p&gt;RewriteBase /&lt;/p&gt;
+&lt;p&gt;RewriteRule ^index\.php$ - [L]&lt;/p&gt;
+&lt;p&gt;RewriteCond %{REQUEST_FILENAME} !-f&lt;/p&gt;
+&lt;p&gt;RewriteCond %{REQUEST_FILENAME} !-d&lt;/p&gt;
+&lt;p&gt;RewriteRule . /index.php [L]&lt;/p&gt;
+&lt;p&gt;# END WordPress&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>wordfence</title>
+      <link>//localhost:1313/2023/12/wordfence.html</link>
+      <pubDate>Wed, 13 Dec 2023 00:04:00 +0600</pubDate>
+      <guid>//localhost:1313/2023/12/wordfence.html</guid>
+      <description>&lt;p&gt;26a3a58da48518eda141af7e48cbf99d572d46fae2216c7530c471c2a8a7d22a5dadf4e9215c0b22564946d6729ee338bc1f23f62a7fa7749cad12b4e844032a&lt;/p&gt;
+&lt;p&gt;sa.y@g&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>admin dashboard</title>
+      <link>//localhost:1313/2023/12/admin-dashboard.html</link>
+      <pubDate>Fri, 08 Dec 2023 20:41:00 +0600</pubDate>
+      <guid>//localhost:1313/2023/12/admin-dashboard.html</guid>
+      <description>&lt;p&gt; &lt;a href=&#34;https://drive.google.com/file/d/14GdIAgZERynoh7CjAjQVcXOHngogISsw/view?usp=sharing&#34;&gt;https://drive.google.com/file/d/14GdIAgZERynoh7CjAjQVcXOHngogISsw/view?usp=sharing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>.htaccess</title>
+      <link>//localhost:1313/2023/12/htaccess.html</link>
+      <pubDate>Fri, 08 Dec 2023 20:33:00 +0600</pubDate>
+      <guid>//localhost:1313/2023/12/htaccess.html</guid>
+      <description>&lt;p&gt; https://pagespeed.web.dev/&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://securityheaders.com/
+https://www.webpagetest.org/
+https://hackertarget.com/wordpress-security-scan/
+
+
+# BEGIN WordPress
+# The directives (lines) between &amp;#34;BEGIN WordPress&amp;#34; and &amp;#34;END WordPress&amp;#34; are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+&amp;lt;IfModule mod\_rewrite.c&amp;gt;
+RewriteEngine On
+RewriteRule .\* - \[E=HTTP\_AUTHORIZATION:%{HTTP:Authorization}\]
+RewriteBase /
+RewriteRule ^index\\.php$ - \[L\]
+RewriteCond %{REQUEST\_FILENAME} !-f
+RewriteCond %{REQUEST\_FILENAME} !-d
+RewriteRule . /index.php \[L\]
+&amp;lt;/IfModule&amp;gt;
+
+# END WordPress
+
+# BEGIN Headers Security Advanced &amp;amp; HSTS WP 5.0.28
+&amp;lt;IfModule mod\_headers.c&amp;gt;
+Header set Access-Control-Allow-Methods &amp;#34;GET,POST&amp;#34;
+Header set Access-Control-Allow-Headers &amp;#34;Content-Type, Authorization&amp;#34;
+Header set Content-Security-Policy &amp;#34;upgrade-insecure-requests;&amp;#34;
+Header set Cross-Origin-Embedder-Policy &amp;#34;unsafe-none; report-to=&amp;#39;default&amp;#39;&amp;#34;
+Header set Cross-Origin-Embedder-Policy-Report-Only &amp;#34;unsafe-none; report-to=&amp;#39;default&amp;#39;&amp;#34;
+Header set Cross-Origin-Opener-Policy &amp;#34;unsafe-none&amp;#34;
+Header set Cross-Origin-Opener-Policy-Report-Only &amp;#34;unsafe-none; report-to=&amp;#39;default&amp;#39;&amp;#34;
+Header set Cross-Origin-Resource-Policy &amp;#34;cross-origin&amp;#34;
+Header set Permissions-Policy &amp;#34;accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(self), encrypted-media=(), fullscreen=\*, geolocation=(self), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=\*, picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), gamepad=(), serial=()&amp;#34;
+Header set Referrer-Policy &amp;#34;strict-origin-when-cross-origin&amp;#34;
+Header set Strict-Transport-Security &amp;#34;max-age=63072000&amp;#34;
+Header set X-Content-Security-Policy &amp;#34;default-src &amp;#39;self&amp;#39;; img-src \*; media-src \* data:;&amp;#34;
+Header set X-Content-Type-Options &amp;#34;nosniff&amp;#34;
+Header set X-Frame-Options &amp;#34;SAMEORIGIN&amp;#34;
+Header set X-XSS-Protection &amp;#34;1; mode=block&amp;#34;
+Header set X-Permitted-Cross-Domain-Policies &amp;#34;none&amp;#34;
+&amp;lt;/IfModule&amp;gt;
+# END Headers Security Advanced &amp;amp; HSTS WP
+
+
+# protect .htaccess
+&amp;lt;Files ~ &amp;#34;^.\*\\.(\[Hh\]\[Tt\]\[Aa\])&amp;#34;&amp;gt;
+	Order allow,deny
+	Deny from all
+	Satisfy all
+&amp;lt;/Files&amp;gt;
+
+# protect wpconfig.php 
+&amp;lt;files wp-config.php&amp;gt; 
+  order allow,deny 
+  deny from all 
+&amp;lt;/files&amp;gt;
+
+#directory browsing block
+Options All -Indexes
+
+# Block WordPress xmlrpc.php requests
+&amp;lt;Files xmlrpc.php&amp;gt;
+order deny,allow
+deny from all
+&amp;lt;/Files&amp;gt;
+
+# BEGIN block author scans
+RewriteEngine On
+RewriteBase /
+RewriteCond %{QUERY\_STRING} (author=\\d+) \[NC\]
+RewriteRule .\* - \[F\]
+# END block author scans
+
+
+# protect the .htaccess
+&amp;lt;files .htaccess&amp;gt; 
+  order allow,deny 
+  deny from all 
+&amp;lt;/files&amp;gt;
+
+
+{{{{{{in wp-Content
+create .htaccess
+paste code}}}}}}
+
+
+# wp-content access deny
+Order deny,allow
+    Deny from all
+    &amp;lt;Files ~ &amp;#34;&amp;#34;.(xml|css|jpe?g|png|gif|js)$&amp;#34;&amp;#34;&amp;gt;
+    Allow from all
+    &amp;lt;/Files&amp;gt;
+
+
+
+&amp;gt; create a new .htaccess file in wp-content/uploads directory &amp;amp; put the codes there:
+# uploads directory access deny
+&amp;lt;Files \*.php&amp;gt;
+deny from all
+&amp;lt;/Files&amp;gt;
+# Block executables
+&amp;lt;FilesMatch &amp;#34;&amp;#34;\\.(php|phtml|php3|php4|php5|pl|py|jsp|asp|html|htm|shtml|sh|cgi|suspected)$&amp;#34;&amp;#34;&amp;gt;
+    deny from all
+&amp;lt;/FilesMatch&amp;gt;
+
+
+wordfence
+62ae96abbc505f813e0de5ca850391957685866faebd87550a664a902773535f83a07d71a729955aa513322a0e958520b1de578b5a932d0c2b1508a1c6674795
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>
