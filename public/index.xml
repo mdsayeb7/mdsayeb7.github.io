@@ -38,7 +38,6 @@
     .gallery-container {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 20px;
     }
 
     .gallery {
@@ -159,9 +158,7 @@
 
     /* Modified media queries to maintain 3 columns */
     @media (max-width: 768px) {
-      .gallery-container {
-        padding: 10px;
-      }
+
 
       .gallery {
         display: grid;
@@ -169,18 +166,12 @@
         /* Show one item per row */
         gap: 15px;
       }
-
-
+      
     @media (max-width: 480px) {
       .gallery {
         grid-template-columns: 1fr;
         /* Ensure one column on smaller screens */
         gap: 10px;
-      }
-
-      .gallery-item img {
-        height: 150px;
-        /* Adjust height for smaller screens */
       }
     }
   &lt;/style&gt;
