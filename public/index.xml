@@ -164,21 +164,23 @@
       }
 
       .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Show one item per row */
         gap: 15px;
       }
 
-      .gallery-item img {
-        height: 150px;
-      }
-    }
 
     @media (max-width: 480px) {
       .gallery {
+        grid-template-columns: 1fr;
+        /* Ensure one column on smaller screens */
         gap: 10px;
       }
 
       .gallery-item img {
-        height: 100px;
+        height: 150px;
+        /* Adjust height for smaller screens */
       }
     }
   &lt;/style&gt;

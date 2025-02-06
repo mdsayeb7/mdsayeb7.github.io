@@ -14,7 +14,6 @@ hideMeta: true
     .gallery-container {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 20px;
     }
 
     .gallery {
@@ -135,26 +134,20 @@ hideMeta: true
 
     /* Modified media queries to maintain 3 columns */
     @media (max-width: 768px) {
-      .gallery-container {
-        padding: 10px;
-      }
+
 
       .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Show one item per row */
         gap: 15px;
       }
-
-      .gallery-item img {
-        height: 150px;
-      }
-    }
-
+      
     @media (max-width: 480px) {
       .gallery {
+        grid-template-columns: 1fr;
+        /* Ensure one column on smaller screens */
         gap: 10px;
-      }
-
-      .gallery-item img {
-        height: 100px;
       }
     }
   </style>
