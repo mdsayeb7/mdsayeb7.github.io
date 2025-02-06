@@ -748,6 +748,7 @@ wordfence
     .gallery-container {
       max-width: 1400px;
       margin: 0 auto;
+      padding: 0 20px;
     }
 
     .gallery {
@@ -839,20 +840,55 @@ wordfence
       z-index: 1001;
     }
 
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .pagination button {
+      background: #222332;
+      color: #dfe6ff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .pagination button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .pagination span {
+      color: var(--secondary);
+    }
+
+    /* Modified media queries to maintain 3 columns */
     @media (max-width: 768px) {
+      .gallery-container {
+        padding: 10px;
+      }
+
       .gallery {
-        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
       }
 
-      .gallery-container {
-        padding: 10px;
+      .gallery-item img {
+        height: 150px;
       }
     }
 
     @media (max-width: 480px) {
       .gallery {
-        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .gallery-item img {
+        height: 100px;
       }
     }
   &lt;/style&gt;
@@ -860,8 +896,10 @@ wordfence
 
 &lt;body&gt;
   &lt;div class=&#34;gallery-container&#34;&gt;
-    &lt;h2&gt;My Photography &lt;/h2&gt;
-    &lt;p&gt;A collection of stunning photographs from various locations.&lt;/p&gt;</description>
+    &lt;h2&gt;My Photography&lt;/h2&gt;
+    &lt;p&gt;Hey there! Welcome to my photography collection. Here you&#39;ll find an arbitrary selection of photos taken by me.
+      These works are included because I consider them interesting, nice, or just worth showing—not necessarily
+      technically perfect or my best.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
