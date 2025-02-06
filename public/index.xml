@@ -1025,133 +1025,133 @@ wordfence
       {
         image: &#34;./img/sYTIOoOwpGs.webp&#34;,
         title: &#34;YSDI Trust&#34;,
-        description: &#34;Project description here.&#34;,
+        description: &#34;An educational platform designed to enhance youth skills in IT and digital literacy through structured courses and hands-on projects.&#34;,
         tags: [&#34;WordPres&#34;, &#34;LMS&#34;, &#34;Organization&#34;],
         live: &#34;https://ysditrust.com/&#34;
       },
       {
-        image: &#34;./img/bfleDNHtWmP.webp&#34;,
-        title: &#34;Career Songbad&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;WordPres&#34;, &#34;Magazine&#34;],
-        live: &#34;https://www.careersongbad.com/&#34;
+        image: &#34;./img/WfYcEntjBmq.webp&#34;,
+        title: &#34;JobPro&#34;,
+        description: &#34;A career training platform offering courses and certifications to help individuals enhance their skills and improve their employability.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Training&#34;],
+        live: &#34;https://jobprobd.com/&#34;
       },
       {
-        image: &#34;./img/AGOYeRpblce.webp&#34;,
-        title: &#34;E-Commerce Barta&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;WordPres&#34;, &#34;Newspaper&#34;],
-        live: &#34;https://e-commercebarta.com/&#34;
+        image: &#34;./img/fHugJDAlcwJ.webp&#34;,
+        title: &#34;Labartise&#34;,
+        description: &#34;Labartise is a digital solutions company specializing in web development, custom software, app development, SEO, and web security.&#34;,
+        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
+        live: &#34;https://labartise.com/&#34;
       },
       {
-        image: &#34;./img/kUoitnYrCvu.webp&#34;,
-        title: &#34;Borno Rekha&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;WordPres&#34;, &#34;E-Commerce&#34;, &#34;WooCommerce&#34;],
-        live: &#34;#&#34;
-      },
-      {
-        image: &#34;./img/oKKSlREQFXt.webp&#34;,
-        title: &#34;Bangladesh Finance Tribune&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;WordPres&#34;, &#34;Newspaper&#34;],
-        live: &#34;https://bangladeshfinancetribune.com/&#34;
+        image: &#34;./img/VdgwjLZRyln.webp&#34;,
+        title: &#34;SkillsBoost&#34;,
+        description: &#34;A platform offering skill development courses for professionals looking to enhance their career prospects and stay competitive in the job market.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Skill Development&#34;],
+        live: &#34;https://skillsboostbd.com/&#34;
       },
       {
         image: &#34;./img/pgzhjgtakzQ.webp&#34;,
         title: &#34;Talk Story&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
+        description: &#34;A digital agency providing creative services such as web design, content creation, and digital marketing to help businesses grow online.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Agency&#34;],
         live: &#34;https://talkstory.biz/&#34;
+      },
+      {
+        image: &#34;./img/MdMfRBbInDW.webp&#34;,
+        title: &#34;Or OwL&#34;,
+        description: &#34;A next-generation social platform with real-time chat, audio and video calls, AI-powered content generation, and full control over personal data.&#34;,
+        tags: [&#34;PHP&#34; &#34;Social Media&#34;],
+        live: &#34;https://orowl.com/&#34;
       },
       {
         image: &#34;./img/PNyGMVrPuQc.webp&#34;,
         title: &#34;Job Portal by JobPro&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
+        description: &#34;A job portal connecting employers with job seekers, featuring advanced search filters and a user-friendly interface for easy job applications.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Job Portal&#34;],
         live: &#34;https://jobportal.jobprobd.com/&#34;
+      },
+      {
+        image: &#34;./img/xSNsncJjiYO.webp&#34;,
+        title: &#34;Junior SkillsBoost&#34;,
+        description: &#34;An initiative aimed at developing the skills of young learners through interactive courses and practical projects in various subjects.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Skill Development&#34;],
+        live: &#34;https://junior.skillsboostbd.com/&#34;
+      },
+      {
+        image: &#34;./img/bfleDNHtWmP.webp&#34;,
+        title: &#34;Career Songbad&#34;,
+        description: &#34;A comprehensive career guidance website offering job listings, career advice, and resources to help job seekers navigate the job market.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Magazine&#34;],
+        live: &#34;https://www.careersongbad.com/&#34;
+      },
+      {
+        image: &#34;./img/kUoitnYrCvu.webp&#34;,
+        title: &#34;Borno Rekha&#34;,
+        description: &#34;An e-commerce site with secure payment options, seamless inventory management, real-time order tracking, user authentication, and an intuitive admin dashboard.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;E-Commerce&#34;, &#34;WooCommerce&#34;],
+        live: &#34;#&#34;
       },
       {
         image: &#34;./img/seMuYNiuEEn.webp&#34;,
         title: &#34;AR Unique&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
+        description: &#34;An e-commerce site with secure payment options, seamless inventory management, real-time order tracking, user authentication, and an intuitive admin dashboard.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;E-Commerce&#34;, &#34;WooCommerce&#34;],
         live: &#34;https://arunique.com/&#34;
+      },
+      {
+        image: &#34;./img/oKKSlREQFXt.webp&#34;,
+        title: &#34;Bangladesh Finance Tribune&#34;,
+        description: &#34;A finance news portal delivering up-to-date financial news, market analysis, and expert insights for investors and business professionals.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Newspaper&#34;],
+        live: &#34;https://bangladeshfinancetribune.com/&#34;
+      },
+      {
+        image: &#34;./img/AGOYeRpblce.webp&#34;,
+        title: &#34;E-Commerce Barta&#34;,
+        description: &#34;A finance news portal delivering up-to-date financial news, market analysis, and expert insights for investors and business professionals.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Newspaper&#34;],
+        live: &#34;https://e-commercebarta.com/&#34;
       },
       {
         image: &#34;./img/UbijQVwNaNM.webp&#34;,
         title: &#34;ICT For Everyone&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
+        description: &#34;A community-driven initiative offering free IT education and resources to promote digital literacy and bridge the technology gap.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Projects&#34;],
         live: &#34;#&#34;
       },
       {
         image: &#34;./img/vEYnFQVKeLK.webp&#34;,
         title: &#34;Big Bangla News&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
+        description: &#34;A news website providing the latest updates on local and international events, covering politics, entertainment, sports, and more.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Newspaper&#34;],
         live: &#34;https://bigbanglanews.com/&#34;
-      },
-      {
-        image: &#34;./img/WfYcEntjBmq.webp&#34;,
-        title: &#34;JobPro&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
-        live: &#34;https://jobprobd.com/&#34;
       },
       {
         image: &#34;./img/wUfyPesqapc.webp&#34;,
         title: &#34;Empower Queen&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
+        description: &#34;A project focused on empowering women through education, vocational training, and entrepreneurship support to foster gender equality.&#34;,
+        tags: [&#34;WordPres&#34;, &#34;Projects&#34;],
         live: &#34;https://empowerqueen.com/&#34;
       },
       {
         image: &#34;./img/XceVzWfjGBj.webp&#34;,
         title: &#34;Taslima Joly&#34;,
-        description: &#34;Project description here.&#34;,
+        description: &#34;A personal blog sharing insights on various topics including lifestyle, personal development, and community engagement.&#34;,
         tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
         live: &#34;#&#34;
       },
       {
-        image: &#34;./img/xSNsncJjiYO.webp&#34;,
-        title: &#34;Junior SkillsBoost&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
-        live: &#34;https://junior.skillsboostbd.com/&#34;
-      },
-      {
-        image: &#34;./img/VdgwjLZRyln.webp&#34;,
-        title: &#34;SkillsBoost&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
-        live: &#34;https://skillsboostbd.com/&#34;
-      },
-      {
-        image: &#34;./img/fHugJDAlcwJ.webp&#34;,
-        title: &#34;Labartise&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
-        live: &#34;https://labartise.com/&#34;
-      },
-      {
-        image: &#34;./img/MdMfRBbInDW.webp&#34;,
-        title: &#34;Or OwL&#34;,
-        description: &#34;Project description here.&#34;,
-        tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
-        live: &#34;https://orowl.com/&#34;
-      },
-      {
         image: &#34;./img/TssgQfNhwid.webp&#34;,
         title: &#34;Buniad&#34;,
-        description: &#34;Project description here.&#34;,
+        description: &#34;Buniad is an online platform specializing in Islamic education, offering Quran and Hadith courses with live classes, recorded videos, and continuous support.&#34;,
         tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
         live: &#34;https://buniad.com/&#34;
       },
       {
         image: &#34;./img/lSLzowriKlu.webp&#34;,
         title: &#34;DJ TASH&#34;,
-        description: &#34;Project description here.&#34;,
+        description: &#34;A portfolio website for DJ Tash, showcasing her freestyle mixes, DJ drops, mixtapes, merchandise, and event bookings with seamless social media integration.&#34;,
         tags: [&#34;Tag 1&#34;, &#34;Tag 2&#34;],
         live: &#34;https://djtashbz.com/&#34;
       },
