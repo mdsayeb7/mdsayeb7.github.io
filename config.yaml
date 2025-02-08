@@ -94,7 +94,7 @@ params:
 
       <br>
 
-      This blog is mainly for sharing niche or specific information I've found worth archiving. It's about my hard- and software projects, server administration, and other related topics. Occasionally, I might write about my life too.
+      This <a href="/posts" style="color: #f5a97f;"><strong>Blog</strong></a> is mainly for sharing niche or specific information I've found worth archiving. It's about my hard- and software projects, server administration, and other related topics. Occasionally, I might write about my life too.
 
 
 
@@ -143,23 +143,23 @@ menu:
     - name: Main Page
       url: /
       weight: 1
-    - name: About
-      url: /about/
-      weight: 5
     - name: Posts
       url: /posts/
-      weight: 10
+      weight: 5
     - identifier: projects
       name: Projects
       url: /projects/
-      weight: 15
+      weight: 10
     - identifier: photography
       name: Photography
       url: /photography/
-      weight: 20
+      weight: 15
     - identifier: tags
       name: Tags
       url: /tags/
+      weight: 20
+    - name: Search
+      url: /search/
       weight: 25
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
