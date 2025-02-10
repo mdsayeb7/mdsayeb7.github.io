@@ -560,9 +560,9 @@ systemctl disable NetworkManager&lt;/p&gt;</description>
     </item>
     <item>
       <title>Web 🔐  via chatgpt</title>
-      <link>//localhost:1313/posts/web---via-chatgpt/</link>
+      <link>//localhost:1313/posts/web-/</link>
       <pubDate>Thu, 14 Dec 2023 14:34:00 +0600</pubDate>
-      <guid>//localhost:1313/posts/web---via-chatgpt/</guid>
+      <guid>//localhost:1313/posts/web-/</guid>
       <description>&lt;p&gt; V1 (basic) (hack possible)&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; &amp;lt;style&amp;gt;  
 &amp;gt;         body {            display: none;        }    &amp;lt;/style&amp;gt;    &amp;lt;script&amp;gt;        function validatePassword() {            var password = prompt(&amp;#34;Please enter the security key:&amp;#34;);  
