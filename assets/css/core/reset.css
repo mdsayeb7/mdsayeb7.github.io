@@ -43,12 +43,6 @@ table {
     display: block;
 }
 
-.footer {
-    border: solid 0.5px #484e8d;
-    border-radius: 8px;
-    background: #1a1c31;
-    margin-bottom:  20px !important;
-}
 
 h1,
 h2,
