@@ -16,9 +16,9 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
+  title: Sayfullah Sayeb
+  description: "Sayfullah Sayeb"
+  keywords: [Blog, Portfolio, Sayfullah Sayeb]
   author: Sayfullah Sayeb
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -40,6 +40,8 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: false
+  mainSections: []
+  ShowAllPagesInArchive: true
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -55,20 +57,20 @@ params:
 #    icon: /apple-touch-icon.png
 #   iconHeight: 35
 
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
+  # # profile-mode
+  # profileMode:
+  #   enabled: false # needs to be explicitly set
+  #   title: ExampleSite
+  #   subtitle: "This is subtitle"
+  #   imageUrl: "<img location>"
+  #   imageWidth: 120
+  #   imageHeight: 120
+  #   imageTitle: my image
+  #   buttons:
+  #     - name: Posts
+  #       url: posts
+  #     - name: Tags
+  #       url: tags
 
 
   homeInfoParams:
