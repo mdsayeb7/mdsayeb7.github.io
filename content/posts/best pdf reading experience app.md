@@ -7,11 +7,8 @@ tags: ['App Review']
 
 1-Moon +
 - apple style flipping   
-
 2- Eboox
-
 3- Foxit pdf
 - AI Included 
-
 4- Readera
 - sentence markup and highlight
