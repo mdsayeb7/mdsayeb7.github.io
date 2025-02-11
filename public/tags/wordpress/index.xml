@@ -1,89 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordpress on Sayfullah Sayeb</title>
-    <link>//localhost:1313/tags/wordpress/</link>
+    <link>/tags/wordpress/</link>
     <description>Recent content in Wordpress on Sayfullah Sayeb</description>
-    <image>
-      <title>Sayfullah Sayeb</title>
-      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- 0.142.0</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 04 Jun 2024 01:47:00 +0600</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom Date-Specific Product Badges</title>
-      <link>//localhost:1313/posts/custom-date-specific-product-badges/</link>
+      <link>/abcds/custom-date-specific-product-badges/</link>
       <pubDate>Tue, 04 Jun 2024 01:47:00 +0600</pubDate>
-      <guid>//localhost:1313/posts/custom-date-specific-product-badges/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://blogger.googleusercontent.com/img/a/AVvXsEjzQcnP39aCzmn8fidInHmnPwldHpKHtD8cB5KdEbHjFSQ0CN7ol0JIpUsizsMDy02R1hti_YTLFl6bCRiC4B00H6skLr_P88Ju47QQpUVVLjmSov4X1JSpZHJTHUma9DlmLMxa9DHPBuJshfRBNFpPrCdZjurNa-T7lrPGivgvmuO1ouhZ4qzgPM-tkbnt&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blogger.googleusercontent.com/img/a/AVvXsEjzQcnP39aCzmn8fidInHmnPwldHpKHtD8cB5KdEbHjFSQ0CN7ol0JIpUsizsMDy02R1hti_YTLFl6bCRiC4B00H6skLr_P88Ju47QQpUVVLjmSov4X1JSpZHJTHUma9DlmLMxa9DHPBuJshfRBNFpPrCdZjurNa-T7lrPGivgvmuO1ouhZ4qzgPM-tkbnt&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; // Add custom fields to WooCommerce backend under General tab&lt;/p&gt;
-&lt;p&gt;add_action( &amp;lsquo;woocommerce_product_options_general_product_data&amp;rsquo;, &amp;lsquo;wpsh_add_text_field_below_sale_price&amp;rsquo; );&lt;/p&gt;
-&lt;p&gt;function wpsh_add_text_field_below_sale_price() {&lt;/p&gt;
-&lt;p&gt;    global $product_object;&lt;/p&gt;
-&lt;p&gt;    // Original custom field&lt;/p&gt;
-&lt;p&gt;    woocommerce_wp_text_input( array(&lt;/p&gt;
-&lt;p&gt;        &amp;lsquo;id&amp;rsquo;            =&amp;gt; &amp;lsquo;_badge&amp;rsquo;,&lt;/p&gt;
-&lt;p&gt;        &amp;rsquo;label&amp;rsquo;         =&amp;gt; __( &amp;lsquo;Badge text&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),&lt;/p&gt;
-&lt;p&gt;        &amp;lsquo;description&amp;rsquo;   =&amp;gt; __( &amp;lsquo;Enter your pduct badge text here&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),&lt;/p&gt;
-&lt;p&gt;        &amp;lsquo;desc_tip&amp;rsquo;      =&amp;gt; &amp;rsquo;true&amp;rsquo;,&lt;/p&gt;
-&lt;p&gt;        &amp;rsquo;type&amp;rsquo;          =&amp;gt; &amp;rsquo;text&amp;rsquo;,&lt;/p&gt;
-&lt;p&gt;        &amp;lsquo;value&amp;rsquo;         =&amp;gt; $product_object-&amp;gt;get_meta( &amp;lsquo;_badge&amp;rsquo; ),&lt;/p&gt;
-&lt;p&gt;    ) );&lt;/p&gt;
-&lt;p&gt;    // Start date field&lt;/p&gt;
-&lt;p&gt;    woocommerce_wp_text_input( array(&lt;/p&gt;
-&lt;p&gt;        &amp;lsquo;id&amp;rsquo;                =&amp;gt; &amp;lsquo;_start_date&amp;rsquo;,&lt;/p&gt;
-&lt;p&gt;        &amp;rsquo;label&amp;rsquo;             =&amp;gt; __( &amp;lsquo;Dislay start date&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>add a country code prefix in billing phone field</title>
-      <link>//localhost:1313/posts/add-a-country-code-prefix-in-billing-phone-field/</link>
-      <pubDate>Tue, 04 Jun 2024 01:43:00 +0600</pubDate>
-      <guid>//localhost:1313/posts/add-a-country-code-prefix-in-billing-phone-field/</guid>
-      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; // Add country calling code prefix in woocommerce billing phone  
-&amp;gt; // Register WordPress hooks and callbacks for the WooCommerce checkout.  
-&amp;gt; add\_action( &amp;#39;wp\_footer&amp;#39;, &amp;#39;wpsh\_add\_callback\_script&amp;#39; );  
-&amp;gt; add\_action( &amp;#39;wp\_ajax\_nopriv\_append\_country\_prefix\_in\_billing\_phone&amp;#39;, &amp;#39;wpsh\_add\_phone\_prefix&amp;#39; );  
-&amp;gt; add\_action( &amp;#39;wp\_ajax\_append\_country\_prefix\_in\_billing\_phone&amp;#39;, &amp;#39;wpsh\_add\_phone\_prefix&amp;#39; );  
-&amp;gt; add\_action( &amp;#39;woocommerce\_checkout\_process&amp;#39;, &amp;#39;wpsh\_validate\_phone&amp;#39; );  
-&amp;gt; /\* Outputs the JavaScript required for updating the billing phone with the country prefix. \*/  
-&amp;gt; function wpsh\_add\_callback\_script() {  
-&amp;gt;     // Securely pass data to JavaScript.    $ajax\_url = admin\_url(&amp;#39;admin-ajax.php&amp;#39;);    ?&amp;gt;    &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;        (function($) {            $(document.body).on(&amp;#39;updated\_checkout&amp;#39;, function() {                var country\_code = $(&amp;#39;#billing\_country&amp;#39;).val();                var ajax\_data = {                    action: &amp;#39;append\_country\_prefix\_in\_billing\_phone&amp;#39;,                    country\_code: country\_code                };                $.post(&amp;#39;&amp;lt;?php echo esc\_js($ajax\_url); ?&amp;gt;&amp;#39;, ajax\_data, function(response) {                    $(&amp;#39;#billing\_phone&amp;#39;).val(response);                });            });        })(jQuery);    &amp;lt;/script&amp;gt;    &amp;lt;?php}  
-&amp;gt; /\* Handles AJAX request to append the country calling code to the billing phone field. \*/  
-&amp;gt; function wpsh\_add\_phone\_prefix() {  
-&amp;gt;     $country\_code = isset($\_POST\[&amp;#39;country\_code&amp;#39;\]) ? sanitize\_text\_field($\_POST\[&amp;#39;country\_code&amp;#39;\]) : &amp;#39;&amp;#39;;    $calling\_code = &amp;#39;&amp;#39;;    if ($country\_code) {        $calling\_codes = WC()-&amp;gt;countries-&amp;gt;get\_country\_calling\_code($country\_code);        $calling\_code = is\_array($calling\_codes) ? $calling\_codes\[0\] : $calling\_codes;    }    echo $calling\_code;    wp\_die(); }  
-&amp;gt; /\* Validates the phone number length during the WooCommerce checkout process. \*/  
-&amp;gt; function wpsh\_validate\_phone() {  
-&amp;gt;     if (isset($\_POST\[&amp;#39;billing\_phone&amp;#39;\]) &amp;amp;&amp;amp; strlen(preg\_replace(&amp;#39;/\[^0-9\]/&amp;#39;, &amp;#39;&amp;#39;, $\_POST\[&amp;#39;billing\_phone&amp;#39;\])) &amp;lt; 6) {        wc\_add\_notice(\_\_(&amp;#39;Billing Phone must be at least 6 digits long.&amp;#39;, &amp;#39;woocommerce&amp;#39;), &amp;#39;error&amp;#39;);    }}
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    <item>
-      <title>Best wordpress backup plugin</title>
-      <link>//localhost:1313/posts/best-wordpress-backup-plugin/</link>
-      <pubDate>Sun, 04 Feb 2024 04:20:00 +0600</pubDate>
-      <guid>//localhost:1313/posts/best-wordpress-backup-plugin/</guid>
-      <description>&lt;p&gt;Wp - Vivid&lt;/p&gt;</description>
+      <guid>/abcds/custom-date-specific-product-badges/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blogger.googleusercontent.com/img/a/AVvXsEjzQcnP39aCzmn8fidInHmnPwldHpKHtD8cB5KdEbHjFSQ0CN7ol0JIpUsizsMDy02R1hti_YTLFl6bCRiC4B00H6skLr_P88Ju47QQpUVVLjmSov4X1JSpZHJTHUma9DlmLMxa9DHPBuJshfRBNFpPrCdZjurNa-T7lrPGivgvmuO1ouhZ4qzgPM-tkbnt&#34;&gt;&lt;img src=&#34;https://blogger.googleusercontent.com/img/a/AVvXsEjzQcnP39aCzmn8fidInHmnPwldHpKHtD8cB5KdEbHjFSQ0CN7ol0JIpUsizsMDy02R1hti_YTLFl6bCRiC4B00H6skLr_P88Ju47QQpUVVLjmSov4X1JSpZHJTHUma9DlmLMxa9DHPBuJshfRBNFpPrCdZjurNa-T7lrPGivgvmuO1ouhZ4qzgPM-tkbnt&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt; // Add custom fields to WooCommerce backend under General tab&lt;/p&gt;&#xA;&lt;p&gt;add_action( &amp;lsquo;woocommerce_product_options_general_product_data&amp;rsquo;, &amp;lsquo;wpsh_add_text_field_below_sale_price&amp;rsquo; );&lt;/p&gt;&#xA;&lt;p&gt;function wpsh_add_text_field_below_sale_price() {&lt;/p&gt;&#xA;&lt;p&gt;    global $product_object;&lt;/p&gt;&#xA;&lt;p&gt;    // Original custom field&lt;/p&gt;&#xA;&lt;p&gt;    woocommerce_wp_text_input( array(&lt;/p&gt;&#xA;&lt;p&gt;        &amp;lsquo;id&amp;rsquo;            =&amp;gt; &amp;lsquo;_badge&amp;rsquo;,&lt;/p&gt;&#xA;&lt;p&gt;        &amp;rsquo;label&amp;rsquo;         =&amp;gt; __( &amp;lsquo;Badge text&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),&lt;/p&gt;&#xA;&lt;p&gt;        &amp;lsquo;description&amp;rsquo;   =&amp;gt; __( &amp;lsquo;Enter your pduct badge text here&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),&lt;/p&gt;&#xA;&lt;p&gt;        &amp;lsquo;desc_tip&amp;rsquo;      =&amp;gt; &amp;rsquo;true&amp;rsquo;,&lt;/p&gt;&#xA;&lt;p&gt;        &amp;rsquo;type&amp;rsquo;          =&amp;gt; &amp;rsquo;text&amp;rsquo;,&lt;/p&gt;&#xA;&lt;p&gt;        &amp;lsquo;value&amp;rsquo;         =&amp;gt; $product_object-&amp;gt;get_meta( &amp;lsquo;_badge&amp;rsquo; ),&lt;/p&gt;&#xA;&lt;p&gt;    ) );&lt;/p&gt;&#xA;&lt;p&gt;    // Start date field&lt;/p&gt;&#xA;&lt;p&gt;    woocommerce_wp_text_input( array(&lt;/p&gt;&#xA;&lt;p&gt;        &amp;lsquo;id&amp;rsquo;                =&amp;gt; &amp;lsquo;_start_date&amp;rsquo;,&lt;/p&gt;&#xA;&lt;p&gt;        &amp;rsquo;label&amp;rsquo;             =&amp;gt; __( &amp;lsquo;Dislay start date&amp;rsquo;, &amp;lsquo;woocommerce&amp;rsquo; ),&lt;/p&gt;</description>
     </item>
     <item>
       <title>Plugin Info </title>
-      <link>//localhost:1313/posts/plugin-info/</link>
+      <link>/abcds/plugin-info/</link>
       <pubDate>Wed, 31 Jan 2024 17:17:00 +0600</pubDate>
-      <guid>//localhost:1313/posts/plugin-info/</guid>
-      <description>&lt;p&gt; Admin and Site Enhancements (ASE)&lt;/p&gt;
-&lt;p&gt;GTranslate&lt;/p&gt;
-&lt;p&gt;WP-Optimize - Clean, Compress, Cache&lt;/p&gt;
-&lt;p&gt;White Label CMS&lt;/p&gt;
-&lt;p&gt;Code Snippets&lt;/p&gt;
-&lt;p&gt;UpdraftPlus: WordPress Backup &amp;amp; Migration Plugin&lt;/p&gt;
-&lt;p&gt;optimize&lt;/p&gt;
-&lt;p&gt;wpvivid&lt;/p&gt;
-&lt;p&gt;for security &lt;/p&gt;
-&lt;p&gt;wp hide&lt;/p&gt;
-&lt;p&gt;wordfence &lt;/p&gt;
-&lt;p&gt;for Analytics&lt;/p&gt;
-&lt;p&gt;Independent Analytics&lt;/p&gt;</description>
+      <guid>/abcds/plugin-info/</guid>
+      <description>&lt;p&gt; Admin and Site Enhancements (ASE)&lt;/p&gt;&#xA;&lt;p&gt;GTranslate&lt;/p&gt;&#xA;&lt;p&gt;WP-Optimize - Clean, Compress, Cache&lt;/p&gt;&#xA;&lt;p&gt;White Label CMS&lt;/p&gt;&#xA;&lt;p&gt;Code Snippets&lt;/p&gt;&#xA;&lt;p&gt;UpdraftPlus: WordPress Backup &amp;amp; Migration Plugin&lt;/p&gt;&#xA;&lt;p&gt;optimize&lt;/p&gt;&#xA;&lt;p&gt;wpvivid&lt;/p&gt;&#xA;&lt;p&gt;for security &lt;/p&gt;&#xA;&lt;p&gt;wp hide&lt;/p&gt;&#xA;&lt;p&gt;wordfence &lt;/p&gt;&#xA;&lt;p&gt;for Analytics&lt;/p&gt;&#xA;&lt;p&gt;Independent Analytics&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
