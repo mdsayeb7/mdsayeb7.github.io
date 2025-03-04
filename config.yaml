@@ -17,8 +17,8 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Sayfullah Sayeb
-  description: "Sayfullah Sayeb"
-  keywords: [Blog, Portfolio, Sayfullah Sayeb]
+  description: "Md Sayfullah Sayeb - Co-founder of Labartise and a Bangladeshi web developer. Specializes in web-based solutions, game mods, and mobile apps. Learn more on his website."
+  keywords: [Blog, Portfolio, Sayfullah, Sayeb, Sayfullah Sayeb]
   author: Sayfullah Sayeb
   # author: ["Me", "You"] # multiple authors
   images: ["sayfullah-cover.png"]
@@ -111,9 +111,9 @@ params:
 #    - name: telegram
 #      url: "https://t.me/SayebPD"
 
-#  analytics:
-#    google:
-#      SiteVerificationTag: ""
+  analytics:
+    google:
+      SiteVerificationTag: "G-NFMHC0M93N"
 #    bing:
 #      SiteVerificationTag: ""
 #    yandex:
